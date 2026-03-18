@@ -20,9 +20,11 @@ const Header = () => {
             <div className="py-10 bg-[#0A0F1C] font-geist">
                 <Container>
                     <div className="flex justify-between items-center">
+                        {/* logo */}
                         <div className="logo lg:w-[10%] w-[25%]">
                             <Images imgSrc={logo}/>
                         </div>
+                        {/* large device navbar */}
                         <nav className="lg:w-[37%] place-items-end hidden md:block">
                             <ul className="flex gap-x-5 text-white ">
                                 <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">Home</li>
@@ -32,7 +34,7 @@ const Header = () => {
                                 <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">Contact</li>
                             </ul>
                         </nav>
-                        {/* mobile display */}
+                        {/* mobile display navbar */}
                         <div className="mobileNav md:hidden">
                             <FaBarsStaggered onClick={handleShow} size={20} className="text-white relative"/>
                             {show && (
