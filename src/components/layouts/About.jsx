@@ -16,7 +16,7 @@ const About = () => {
                         <h3 className='text-[36px] font-bold text-[#EDEDED] beforeAfter'>About Me</h3>
                     </div>
                     <div className="mt-[72px]">
-                        <div className="flex justify-between">
+                        <div className="flex flex-col lg:flex-row gap-y-10 justify-between">
                             {/* left side */}
                             <div className="left lg:w-[816px]">
                                 {/* 1st chapter */}
@@ -45,16 +45,16 @@ const About = () => {
                             {/* right side */}
                             <div className="right">
                                 {/* img */}
-                                <Images imgSrc={sijan}/>
+                                <Images imgSrc={sijan} className={'mx-auto lg:mx-0'}/>
                                 {/* details */}
-                                <div className="mt-5">
+                                <div className="mt-5 text-center lg:text-left">
                                     <h4 className='text-[20px] font-medium text-[#EDEDED]'>Majharul Islam</h4>
-                                    <p className='pt-1 text-white/60 text-sm'>Frontend Developer (React.js & Next.js)</p>
-                                    <p className='pt-1 text-white/60 text-sm'>Creating High-Performance, Modern Web Applications</p>
+                                    <p className='pt-1 text-white/60 text-[12px] lg:text-sm'>Frontend Developer (React.js & Next.js)</p>
+                                    <p className='pt-1 text-white/60 text-[12px] lg:text-sm'>Creating High-Performance, Modern Web Applications</p>
                                 </div>
                                 {/* btn */}
                                 <div className="btn mt-5">
-                                    <button className='py-2 px-3 bg-[#2B7FFE] text-white text-sm font-medium rounded-md flex items-center gap-x-2 cursor-pointer'><MdOutlineFileDownload size={20}/>Download Resume</button>
+                                    <button className='py-2 px-3 bg-[#2B7FFE] text-white text-sm font-medium rounded-md flex items-center gap-x-2 cursor-pointer mx-auto lg:mx-0'><MdOutlineFileDownload size={20}/>Download Resume</button>
                                 </div>
                             </div>
                         </div>
