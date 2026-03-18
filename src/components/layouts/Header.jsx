@@ -38,7 +38,7 @@ const Header = () => {
                         <div className="mobileNav md:hidden">
                             <FaBarsStaggered onClick={handleShow} size={20} className="text-white relative"/>
                             {show && (
-                            <nav className="lg:w-[37%] absolute top-20 left-1/2 -translate-x-1/2 w-[90%] bg-white rounded-md p-5">
+                            <nav className="lg:w-[37%] absolute top-20 left-1/2 -translate-x-1/2 w-[90%] bg-white/10 backdrop-blur-2xl rounded-md p-5">
                                 <ul className="flex flex-col lg:flex-row gap-x-5 text-white items-center gap-y-5 justify-center overflow-hidden">
                                     <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">Home</li>
                                     <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">About Me</li>
