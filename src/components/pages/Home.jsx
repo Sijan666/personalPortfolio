@@ -1,6 +1,7 @@
 
 import About from "../layouts/About"
 import Banner from "../layouts/Banner"
+import TechStack from "../layouts/TechStack"
 
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
         <>
         <Banner/>
         <About/>
+        <TechStack/>
         </>
     )
 }
