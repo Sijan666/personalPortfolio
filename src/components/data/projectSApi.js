@@ -1,0 +1,55 @@
+import { tech1, tech2, tech3, tech4, tech5 } from "./teckStack";
+import p1 from '../../assets/p1.png'
+
+export const allProjects = [
+    {
+        id : 1 ,
+        projectImg: p1,
+        projectName:"NextTrade",
+        projectType:'Team Project',
+        projectDetails:'An online trading platform providing live market data, interactive charts, user portfolios, and secure buy/sell functionality for stocks and cryptocurrencies.',
+        techStack:tech1,
+        liveLink:'https://main-portfolio-two-khaki.vercel.app/',
+        githubLink:'https://github.com/Sijan666/mainPortfolio',
+    },
+    {
+        id : 2 ,
+        projectImg: p1,
+        projectName:"Invento Wave ",
+        projectType:'Personal Project',
+        projectDetails:'A web-based system to manage inventory, suppliers, sales, and stock reports with role-based access and real-time updates.',
+        techStack:tech2,
+        liveLink:'https://main-portfolio-two-khaki.vercel.app/',
+        githubLink:'https://github.com/Sijan666/mainPortfolio',
+    },
+    {
+        id : 3 ,
+        projectImg: p1,
+        projectName:"Library Hub ",
+        projectType:'Personal Project',
+        projectDetails:'A web application to manage library operations including book cataloging, member registration, borrowing/return tracking, and overdue fine management.',
+        techStack:tech3,
+        liveLink:'https://main-portfolio-two-khaki.vercel.app/',
+        githubLink:'https://github.com/Sijan666/mainPortfolio',
+    },
+    {
+        id : 4 ,
+        projectImg: p1,
+        projectName:"Brand Shop",
+        projectType:'Personal Project',
+        projectDetails:'A modern car brand website featuring product showcases, model comparisons, booking test drives, and dealership locator.',
+        techStack:tech4,
+        liveLink:'https://main-portfolio-two-khaki.vercel.app/',
+        githubLink:'https://github.com/Sijan666/mainPortfolio',
+    },
+    {
+        id : 5 ,
+        projectImg: p1,
+        projectName:"Confer",
+        projectType:'Personal Project',
+        projectDetails:'A system to manage conferences with paper submission, peer review, schedules, and attendee registration.',
+        techStack:tech5,
+        liveLink:'https://main-portfolio-two-khaki.vercel.app/',
+        githubLink:'https://github.com/Sijan666/mainPortfolio',
+    },
+]
