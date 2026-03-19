@@ -18,7 +18,7 @@ const Projects = () => {
                     <div className="mt-10">
                         <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 items-center gap-5">
                             {allProjects.map((item)=>(
-                                <div key={item.id} className="">
+                                <div key={item.id} className="h-full">
                                     <Project
                                         projectImg={item.projectImg}
                                         projectName={item.projectName}
