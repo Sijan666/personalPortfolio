@@ -14,8 +14,8 @@ const Banner = () => {
                 <Container>
                     <div className="text-center py-20">
                         {/* heading */}
-                        <h2 className="text-[30px] lg:text-[50px] font-bold text-[#EDEDED]">Hey! I'm</h2>
-                        <h1 className="text-[30px] lg:text-[72px] font-bold text-[#FE9A00]">
+                        <h2 className="text-[15px] lg:text-[50px] font-bold text-[#EDEDED]">Hey! I'm</h2>
+                        <h1 className="text-[25px] lg:text-[72px] font-bold text-[#FE9A00]">
                             <Typewriter
                                 words={['Front-End Developer', 'Majharul Islam']}
                                 loop={true}
@@ -26,7 +26,7 @@ const Banner = () => {
                                 delaySpeed={1000}
                             />
                         </h1>
-                        <p className="py-10 text-[#EDEDED] text-sm lg:text-base leading-6 lg:w-[420px] mx-auto">A passionate Front-End Developer from Bangladesh . Always curious to learn, explore and collaborate.</p>
+                        <p className="lg:py-10 py-6 text-[#EDEDED] text-sm lg:text-base leading-6 lg:w-[420px] mx-auto">A passionate Front-End Developer from Bangladesh . Always curious to learn, explore and collaborate.</p>
                         <div className="flex flex-col lg:flex-row justify-center gap-y-8 gap-x-8">
                             {/* btn */}
                             <a href="https://github.com/Sijan666" target="_blank"><Button btnText={'View Projects'} className={'px-5 py-2 bg-[#2B7FFE] text-white text-sm rounded-md'}/></a>
