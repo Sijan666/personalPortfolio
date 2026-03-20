@@ -79,7 +79,7 @@ const Contact = () => {
                                 </div>
                             </div>
                             {/* right Form */}
-                            <div className="rightForm lg:w-1/2">
+                            <div className="rightForm lg:w-1/2 w-full">
                                 <div className="bg-white/2 border border-white/5 rounded-xl p-5 ">
                                     <form className='flex flex-col gap-4'>
                                         {/* name */}
