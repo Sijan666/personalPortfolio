@@ -1,26 +1,28 @@
 import { tech1, tech2, tech3, tech4, tech5 } from "./teckStack";
 import p1 from '../../assets/p1.png'
+import orebi from '../../assets/orebi.png'
+import port from '../../assets/port.png'
 
 export const allProjects = [
     {
         id : 1 ,
-        projectImg: p1,
-        projectName:"NextTrade",
-        projectType:'Team Project',
-        projectDetails:'An online trading platform providing live market data, interactive charts, user portfolios, and secure buy/sell functionality for stocks and cryptocurrencies.',
+        projectImg: orebi,
+        projectName:"Orebi",
+        projectType:'Personal Project',
+        projectDetails:'A modern web application to manage online retail operations, including product cataloging, customer orders, and interactive UI for a smooth shopping experience.',
         techStack:tech1,
-        liveLink:'https://main-portfolio-two-khaki.vercel.app/',
-        githubLink:'https://github.com/Sijan666/mainPortfolio',
+        liveLink:'https://ui-addedin-orebi.vercel.app/',
+        githubLink:'https://github.com/Sijan666/OrebiFinalProject',
     },
     {
         id : 2 ,
-        projectImg: p1,
-        projectName:"Invento Wave ",
+        projectImg: port,
+        projectName:"Portfolio",
         projectType:'Personal Project',
-        projectDetails:'A web-based system to manage inventory, suppliers, sales, and stock reports with role-based access and real-time updates.',
+        projectDetails:'A sleek personal portfolio created to visually represent professional identity and creative work. It includes well-structured sections for about me, service offerings, project galleries, and a seamless way for clients to reach out.',
         techStack:tech2,
-        liveLink:'https://main-portfolio-two-khaki.vercel.app/',
-        githubLink:'https://github.com/Sijan666/mainPortfolio',
+        liveLink:'https://sijan666.github.io/pluginsAddedInPera/',
+        githubLink:'https://github.com/Sijan666/pluginsAddedInPera',
     },
     {
         id : 3 ,

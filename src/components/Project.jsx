@@ -1,7 +1,7 @@
 import React from 'react'
 import Images from './Images'
-import { SiExpress, SiFirebase, SiMongodb, SiNextdotjs, SiNodedotjs, SiReact, SiSocketdotio, SiTailwindcss } from 'react-icons/si';
-import { FaArrowUpRightFromSquare, FaStripeS } from 'react-icons/fa6';
+import { SiExpress, SiFirebase, SiJquery, SiMongodb, SiNextdotjs, SiNodedotjs, SiReact, SiSocketdotio, SiTailwindcss } from 'react-icons/si';
+import { FaArrowUpRightFromSquare, FaBootstrap, FaStripeS } from 'react-icons/fa6';
 import { BsGithub } from 'react-icons/bs';
 
 
@@ -17,14 +17,15 @@ const allTechIcons = {
     "Firebase": <SiFirebase className="text-[#FFCA28]"/>,
     "React.js": <SiReact className="text-[#61DAFB]"/>,
     "Stripe": <FaStripeS  className="text-[#61DAFB]"/>,
-
+    "Bootstrap": <FaBootstrap   className="text-[##7718F6]"/>,
+    "jQuery": <SiJquery    className="text-[##186EB1]"/>,
 };
 
 
     return (
         <>
         <div className={`${className} p-3 border border-white/5 rounded-xl bg-white/2 font-geist flex flex-col h-full`}>
-            <Images imgSrc={projectImg} className={'mx-auto w-full'}/>
+            <Images imgSrc={projectImg} className={'mx-auto w-full rounded-lg'}/>
             <div className="details mt-4 flex flex-col grow">
                 <div className="flex gap-x-1 items-baseline">
                     <h4 className='text-[18px] font-medium text-[#EDEDED]'>{projectName}</h4>
@@ -34,7 +35,9 @@ const allTechIcons = {
                         </h5>
                     )}
                 </div>
-                <p className='pt-[5px] text-sm text-white/70 leading-5'>{projectDetails}</p>
+                <div className="mt-auto">
+                    <p className='pt-[5px] text-sm text-white/70 leading-5'>{projectDetails}</p>
+                </div>
                 <div className="mt-auto pt-4 pb-3">
                     <h4 className='text-sm text-[#EDEDED]'>Tech stack:</h4>
                     <div className="mt-1 flex flex-wrap items-center gap-1">
