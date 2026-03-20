@@ -2,6 +2,7 @@ import { FaDiscord, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa"
 import Button from "../Button"
 import Container from "../Container"
 import { GrInstagram } from "react-icons/gr"
+import { Typewriter } from "react-simple-typewriter"
 
 
 
@@ -13,9 +14,19 @@ const Banner = () => {
                 <Container>
                     <div className="text-center py-20">
                         {/* heading */}
-                        <h1 className="text-[30px] lg:text-[72px] font-bold text-[#EDEDED]">A Fabulous</h1>
-                        <h2 className="text-[30px] lg:text-[72px] font-bold text-[#FE9A00]">Frontend Developer</h2>
-                        <p className="py-10 text-[#EDEDED] text-sm lg:text-base leading-6 lg:w-[685px] mx-auto">Hi, I’m Majharul Islam Sijan . A passionate Front-End Developer from Bangladesh . Always curious to learn, explore and collaborate.</p>
+                        <h2 className="text-[30px] lg:text-[50px] font-bold text-[#EDEDED]">Hey! I'm</h2>
+                        <h1 className="text-[30px] lg:text-[72px] font-bold text-[#FE9A00]">
+                            <Typewriter
+                                words={['Front-End Developer', 'Majharul Islam']}
+                                loop={true}
+                                cursor
+                                cursorStyle='|'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                            />
+                        </h1>
+                        <p className="py-10 text-[#EDEDED] text-sm lg:text-base leading-6 lg:w-[420px] mx-auto">A passionate Front-End Developer from Bangladesh . Always curious to learn, explore and collaborate.</p>
                         <div className="flex flex-col lg:flex-row justify-center gap-y-8 gap-x-8">
                             {/* btn */}
                             <a href="https://github.com/Sijan666" target="_blank"><Button btnText={'View Projects'} className={'px-5 py-2 bg-[#2B7FFE] text-white text-sm rounded-md'}/></a>
