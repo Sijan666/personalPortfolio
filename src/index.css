@@ -21,7 +21,7 @@ html.lenis, html.lenis body {
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
-        overscroll-behavior: contain;
+    overscroll-behavior: contain;
 }
 
 .lenis.lenis-stopped {
@@ -30,4 +30,81 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-smooth iframe {
     pointer-events: none;
+}
+
+/* for normal input css */
+.input-container {
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.116);
+    border-radius: 6px;
+    font-size: 14px;
+    color: #222222;
+    outline: none;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.055)
+}
+
+.label {
+    position: absolute;
+    left: 18px;
+    pointer-events: none;
+    padding: 0 4px;
+    transition-duration: 300ms;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: rgba(118, 118, 118, 0.616);
+}
+
+.input:focus ~ .label,
+.input:not(:placeholder-shown) ~ .label {
+    top: 0;
+    font-size: 12px;
+    color: #222222;
+    background-color: #a8a8a8;
+}
+
+/* for textarea */
+.textarea-container {
+    position: relative;
+}
+
+.textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.116);
+    border-radius: 6px;
+    font-size: 14px;
+    color: #222222;
+    outline: none;
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 200px;
+    background: rgba(255, 255, 255, 0.055)
+}
+
+.textarea-label {
+    position: absolute;
+    left: 18px;
+    pointer-events: none;
+    padding: 0 4px;
+    transition-duration: 300ms;
+    top: 21px;
+    transform: translateY(0); 
+    font-size: 14px;
+    color: #767676;
+}
+
+.textarea:focus ~ .textarea-label,
+.textarea:not(:placeholder-shown) ~ .textarea-label {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #222222;
+    background-color: #a8a8a8;
 }
