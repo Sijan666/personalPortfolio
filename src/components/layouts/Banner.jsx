@@ -11,7 +11,7 @@ const Banner = () => {
         <section id="banner">
             <div className="py-15 lg:py-25 bg-[#0A0F1C] font-geist">
                 <Container>
-                    <div className="text-center">
+                    <div className="text-center py-20">
                         {/* heading */}
                         <h1 className="text-[30px] lg:text-[72px] font-bold text-[#EDEDED]">A Fabulous</h1>
                         <h2 className="text-[30px] lg:text-[72px] font-bold text-[#FE9A00]">Frontend Developer</h2>
