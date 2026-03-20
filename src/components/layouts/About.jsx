@@ -12,10 +12,10 @@ const About = () => {
             <div className="py-10 bg-[#0A0F1C] font-geist">
                 <Container>
                     {/* heading text */}
-                    <div className="heading">
-                        <h3 className='text-[36px] font-bold text-[#EDEDED] beforeAfter'>About Me</h3>
+                    <div className="heading text-center lg:text-left">
+                        <h3 className='text-[25px] lg:text-[36px] font-bold text-[#EDEDED] beforeAfter'>About Me</h3>
                     </div>
-                    <div className="mt-[72px]">
+                    <div className="lg:mt-[72px] mt-[50px]">
                         <div className="flex flex-col lg:flex-row gap-y-10 justify-between">
                             {/* left side */}
                             <div className="left lg:w-[816px]">

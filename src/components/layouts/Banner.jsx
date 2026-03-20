@@ -14,8 +14,8 @@ const Banner = () => {
                 <Container>
                     <div className="text-center py-20">
                         {/* heading */}
-                        <h2 className="text-[15px] lg:text-[50px] font-bold text-[#EDEDED]">Hey! I'm</h2>
-                        <h1 className="text-[25px] lg:text-[72px] font-bold text-[#FE9A00]">
+                        <h2 className="text-[15px] md:text-[30px] lg:text-[50px] font-bold text-[#EDEDED]">Hey! I'm</h2>
+                        <h1 className="text-[25px] md:text-[40px] lg:text-[72px] font-bold text-[#FE9A00]">
                             <Typewriter
                                 words={['Front-End Developer', 'Majharul Islam']}
                                 loop={true}

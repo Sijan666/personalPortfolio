@@ -42,13 +42,13 @@ const Header = () => {
                 <Container>
                     <div className="flex justify-between items-center">
                         {/* logo */}
-                        <div className="logo lg:w-[10%] w-[25%]">
+                        <div className="logo lg:w-[10%] w-[25%] md:w-[15%]">
                             <SmoothLink href="#header">
                                 <Images imgSrc={logo}/>
                             </SmoothLink>
                         </div>
                         {/* large device navbar */}
-                        <nav className="lg:w-[37%] place-items-end hidden md:block">
+                        <nav className="lg:w-[37%] place-items-end hidden lg:block">
                             <ul className="flex gap-x-8 text-white ">
                                 <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">
                                     <SmoothLink href="#header">Home</SmoothLink>
@@ -68,10 +68,10 @@ const Header = () => {
                             </ul>
                         </nav>
                         {/* mobile display navbar */}
-                        <div className="mobileNav md:hidden">
+                        <div className="mobileNav lg:hidden">
                             <FaBarsStaggered onClick={handleShow} size={20} className="text-white relative"/>
                             {show && (
-                            <nav className="lg:w-[37%] absolute top-20 left-1/2 -translate-x-1/2 w-[90%] bg-white/10 backdrop-blur-2xl rounded-md p-5">
+                            <nav className="absolute top-20 left-1/2 -translate-x-1/2 w-[90%] bg-white/10 backdrop-blur-2xl rounded-md p-5">
                                 <ul className="flex flex-col lg:flex-row gap-x-5 text-white items-center gap-y-5 justify-center overflow-hidden">
                                     <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">
                                         <SmoothLink href="/">Home</SmoothLink>

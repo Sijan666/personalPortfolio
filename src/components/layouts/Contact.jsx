@@ -37,38 +37,38 @@ const Contact = () => {
             <div className="py-25 bg-[#0A0F1C] font-geist">
                 <Container>
                     {/* heading text */}
-                    <div className="heading">
-                        <h3 className='text-[36px] font-bold text-[#EDEDED] beforeAfter'>Contact Me</h3>
+                    <div className="heading text-center lg:text-left">
+                        <h3 className='text-[25px] lg:text-[36px] font-bold text-[#EDEDED] beforeAfter'>Contact Me</h3>
                         <p className='text-bsae text-[#99A1AF] lg:w-[559px] leading-6 pt-8'>I'm always happy to discuss opportunities, answer questions, or explore new ideas. Send a message or connect online.</p>
                     </div>
                     <div className="mt-10">
-                        <div className="flex flex-col lg:flex-row justify-between items-center gap-10">
+                        <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-10">
                             {/* left info */}
                             <div className="leftInfo lg:w-1/2">
                                 {/* 1 */}
-                                <div className="flex gap-x-3 lg:w-[444px]">
+                                <div className="flex gap-x-3 lg:w-[444px] w-full">
                                     <div className="p-[9px] h-10 w-10 border border-[#2B7FFE]/30 rounded-lg">
                                         <MdOutlineContactPage  size={20} className='text-[#2B7FFE]'/>
                                     </div>
                                     <div className="text">
                                         <h4 className='text-base text-[#2B7FFE] font-medium leading-6'>Contact Information</h4>
-                                        <p className='text-white/60 text-sm leading-5'>Reach me directly via email or phone for questions or collaborations.</p>
+                                        <p className='text-white/60 text-[12px] lg:text-sm leading-5 '>Reach me directly via email or phone for questions or collaborations.</p>
                                         {/* contact */}
                                         <div className="mt-5">
                                             {/* 1 */}
                                             <div className="flex gap-x-3">
                                                 <LuMail size={22} className='text-[#2B7FFE]'/>
                                                 <div className="text">
-                                                    <h4 className='text-sm font-medium leading-5 text-[#EDEDED]'>Email</h4>
-                                                    <h5 className='pt-1 text-sm text-white/70'>majharulislamsijan.dev@gmail.com</h5>
+                                                    <h4 className='text-[12px] lg:text-sm font-medium leading-5 text-[#EDEDED]'>Email</h4>
+                                                    <h5 className='pt-1 text-[12px] lg:text-sm text-white/70'>majharulislamsijan.dev@gmail.com</h5>
                                                 </div>
                                             </div>
                                             {/* 2 */}
                                             <div className="flex gap-x-3 mt-4">
                                                 <LuMail size={22} className='text-[#2B7FFE]'/>
                                                 <div className="text">
-                                                    <h4 className='text-sm font-medium leading-5 text-[#EDEDED]'>Phone</h4>
-                                                    <h5 className='pt-1 text-sm text-white/70'>+8801828871277</h5>
+                                                    <h4 className='text-[12px] lg:text-sm font-medium leading-5 text-[#EDEDED]'>Phone</h4>
+                                                    <h5 className='pt-1 text-[12px] lg:text-sm text-white/70'>+8801828871277</h5>
                                                 </div>
                                             </div>
                                             {/* 3 */}
@@ -76,20 +76,20 @@ const Contact = () => {
                                                 <LuMail size={22} className='text-[#2B7FFE]'/>
                                                 <div className="text">
                                                     <h4 className='text-sm font-medium leading-5 text-[#EDEDED]'>Location</h4>
-                                                    <h5 className='pt-1 text-sm text-white/70'>Dhaka , Bangladesh</h5>
+                                                    <h5 className='pt-1 text-[12px] lg:text-sm text-white/70'>Dhaka , Bangladesh</h5>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 {/* 2 */}
-                                <div className="flex gap-x-3 lg:w-[444px] mt-10">
+                                <div className="flex gap-x-3 lg:w-[444px] mt-10 w-full">
                                     <div className="p-[9px] h-10 w-10 border border-[#2B7FFE]/30 rounded-lg">
                                         <MdOutlineContactPage  size={20} className='text-[#2B7FFE]'/>
                                     </div>
                                     <div className="text">
                                         <h4 className='text-base text-[#2B7FFE] font-medium leading-6'>Connect with Me</h4>
-                                        <p className='text-white/60 text-sm leading-5'>Stay connected on social media for collaborations or updates.</p>
+                                        <p className='text-white/60 text-[12px] lg:text-sm leading-5'>Stay connected on social media for collaborations or updates.</p>
                                         {/* contact */}
                                         <div className="mt-5">
                                             <div className="socialIcons flex lg:gap-x-5 gap-x-8 items-center text-white/50">
