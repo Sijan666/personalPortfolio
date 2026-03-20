@@ -1,17 +1,35 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Container from '../Container'
 import { LuMail } from 'react-icons/lu'
 import { MdOutlineContactPage } from 'react-icons/md'
-import { FaDiscord, FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { GrInstagram } from 'react-icons/gr'
 import Button from '../Button'
+import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
 
-    const handleFormSubmit = (e) => {
-    e.preventDefault();
-    console.log("Button clicked, kintu page reload hocche na!");
-}
+    // email js
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_y315zst', 'template_2u72gov', form.current, 'y7o7ZXi1gyIaKWOLJ')
+        .then(
+            () => {
+                console.log('SUCCESS!');
+                alert("Message sent successfully!");
+                form.current.reset();
+            },
+            (error) => {
+                console.log('FAILED...', error.text);
+                alert("Something went wrong. Please try again.");
+            },
+        );
+    };
+    // email js
 
     return (
         <>
@@ -95,12 +113,12 @@ const Contact = () => {
                             {/* right Form */}
                             <div className="rightForm lg:w-1/2 w-full">
                                 <div className="bg-white/2 border border-white/5 rounded-xl p-5 ">
-                                    <form onSubmit={handleFormSubmit} className='flex flex-col gap-4'>
+                                    <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-4'>
                                         {/* name */}
                                         <div className="name">
                                             <h4 className='text-sm text-white/70 pb-4'>Name</h4>
                                             <div className="input-container">
-                                                <input type="text" id="" placeholder=" " className="input"/>
+                                                <input type="text" name="user_name" required  id="" placeholder=" " className="input"/>
                                                 <label className="label">Enter your name</label>
                                             </div>
                                         </div>
@@ -108,7 +126,7 @@ const Contact = () => {
                                         <div className="email">
                                             <h4 className='text-sm text-white/70 pb-4'>Email</h4>
                                             <div className="input-container">
-                                                <input type="email" id="" placeholder=" " className="input"/>
+                                                <input type="email" name="user_email" required  id="" placeholder=" " className="input"/>
                                                 <label className="label">Enter your email</label>
                                             </div>
                                         </div>
@@ -116,7 +134,7 @@ const Contact = () => {
                                         <div className="subject">
                                             <h4 className='text-sm text-white/70 pb-4'>Subject</h4>
                                             <div className="input-container">
-                                                <input type="text" id="" placeholder=" " className="input"/>
+                                                <input type="text" name="subject" id="" placeholder=" " className="input"/>
                                                 <label className="label">Enter subject</label>
                                             </div>
                                         </div>
@@ -124,13 +142,13 @@ const Contact = () => {
                                         <div className="message">
                                             <h4 className='text-sm text-white/70 pb-4'>Message</h4>
                                             <div className="textarea-container w-full">
-                                                <textarea id="message" placeholder=" "className="textarea"></textarea>
+                                                <textarea id="message" name="message" placeholder=" "className="textarea"></textarea>
                                                 <label htmlFor="message" className="textarea-label">Enter your message</label>
                                             </div>
                                         </div>
                                         {/* btn */}
                                         <div className="btn">
-                                            <Button btnText={"Send Message"} className={'py-2 bg-[#2B7FFE] text-base leading-6 text-white/90 rounded-md  w-full'}/>
+                                            <Button btnText={"Send Message"} type="submit" value="Send" className={'py-2 bg-[#2B7FFE] text-base leading-6 text-white/90 rounded-md w-full'}/>
                                         </div>
                                     </form>
                                 </div>
