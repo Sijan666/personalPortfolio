@@ -17,7 +17,7 @@ const Header = () => {
     return (
         <>
         <header>
-            <div className="py-10 bg-[#0A0F1C] font-geist">
+            <div className="py-5 bg-[#0A0F1C] font-geist">
                 <Container>
                     <div className="flex justify-between items-center">
                         {/* logo */}
@@ -26,7 +26,7 @@ const Header = () => {
                         </div>
                         {/* large device navbar */}
                         <nav className="lg:w-[37%] place-items-end hidden md:block">
-                            <ul className="flex gap-x-5 text-white ">
+                            <ul className="flex gap-x-8 text-white ">
                                 <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">Home</li>
                                 <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">About Me</li>
                                 <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">Tech Stack</li>
