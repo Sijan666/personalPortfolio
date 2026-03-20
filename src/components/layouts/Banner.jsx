@@ -22,11 +22,18 @@ const Banner = () => {
                             <div className="h-9 w-1 bg-white/10 hidden lg:block"></div>
                             {/* social links */}
                             <div className="socialIcons flex lg:gap-x-5 gap-x-8 items-center justify-center text-white/50">
-                                <FaGithub size={20} className="cursor-pointer"/>
-                                <FaLinkedin size={20} className="cursor-pointer"/>
-                                <FaFacebook size={20} className="cursor-pointer"/>
-                                <GrInstagram size={20} className="cursor-pointer"/>
-                                <FaDiscord size={20} className="cursor-pointer"/>
+                                <a href="https://github.com/Sijan666" target="_blank">
+                                    <FaGithub size={20} className="cursor-pointer"/>
+                                </a>
+                                <a href="https://www.linkedin.com/in/majharulislamdev/" target="_blank">
+                                    <FaLinkedin size={20} className="cursor-pointer"/>
+                                </a>
+                                <a href="https://www.facebook.com/majharul.islam.666/" target="_blank">
+                                    <FaFacebook size={20} className="cursor-pointer"/>
+                                </a>
+                                <a href="https://instagram.com/majharul_sijan" target="_blank">
+                                    <GrInstagram size={20} className="cursor-pointer"/>
+                                </a>
                             </div>
                         </div>
                     </div>

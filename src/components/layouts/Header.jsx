@@ -24,7 +24,9 @@ const Header = () => {
                     <div className="flex justify-between items-center">
                         {/* logo */}
                         <div className="logo lg:w-[10%] w-[25%]">
-                            <Images imgSrc={logo}/>
+                            <SmoothLink href="#header">
+                                <Images imgSrc={logo}/>
+                            </SmoothLink>
                         </div>
                         {/* large device navbar */}
                         <nav className="lg:w-[37%] place-items-end hidden md:block">
