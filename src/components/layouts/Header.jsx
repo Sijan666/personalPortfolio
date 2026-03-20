@@ -3,6 +3,7 @@ import Images from "../Images"
 import logo from '../../assets/logo.png'
 import { useState } from "react"
 import { FaBarsStaggered } from "react-icons/fa6"
+import SmoothLink from "../SmoothLink"
 
 
 const Header = () => {
@@ -15,6 +16,7 @@ const Header = () => {
 
 
     return (
+        
         <>
         <header>
             <div className="py-5 bg-[#0A0F1C] font-geist">
@@ -28,10 +30,18 @@ const Header = () => {
                         <nav className="lg:w-[37%] place-items-end hidden md:block">
                             <ul className="flex gap-x-8 text-white ">
                                 <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">Home</li>
-                                <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">About Me</li>
-                                <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">Tech Stack</li>
-                                <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">Projects</li>
-                                <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">Contact</li>
+                                <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">
+                                    <SmoothLink href="#about">About Me</SmoothLink>
+                                </li>
+                                <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">
+                                    <SmoothLink href="#techStack">Tech Stack</SmoothLink>
+                                </li>
+                                <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">
+                                    <SmoothLink href="#projects">Projects</SmoothLink>
+                                </li>
+                                <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">
+                                    <SmoothLink href="#contact">Contact</SmoothLink>
+                                </li>
                             </ul>
                         </nav>
                         {/* mobile display navbar */}
