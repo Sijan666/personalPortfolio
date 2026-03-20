@@ -9,3 +9,25 @@
 .beforeAfter{
     @apply relative pb-1 duration-300 after:content-[""] after:absolute after:left-0 after:bottom-0 after:w-[75%] after:h-1 after:bg-[#2B7FFE] after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300 inline-block
 }
+
+
+/* Lenis Smooth Scroll CSS */
+html.lenis, html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+        overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}
