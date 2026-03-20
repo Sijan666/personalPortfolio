@@ -35,7 +35,7 @@ const allTechIcons = {
                     )}
                 </div>
                 <p className='pt-[5px] text-sm text-white/70 leading-5'>{projectDetails}</p>
-                <div className="mt-4 pb-3">
+                <div className="mt-auto pt-4 pb-3">
                     <h4 className='text-sm text-[#EDEDED]'>Tech stack:</h4>
                     <div className="mt-1 flex flex-wrap items-center gap-1">
                         {techStack.map((item) => (
