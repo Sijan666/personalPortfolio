@@ -1,7 +1,7 @@
 import Container from "../Container"
 import Images from "../Images"
 import logo from '../../assets/logo.png'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { FaBarsStaggered } from "react-icons/fa6"
 import SmoothLink from "../SmoothLink"
 
@@ -13,13 +13,32 @@ const Header = () => {
     const handleShow = ()=>{
         setShow(!show)
     }
+    const [isScrolled, setIsScrolled] = useState(false)
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true)
+            } else {
+                setIsScrolled(false)
+            }
+        }
+
+        window.addEventListener("scroll", handleScroll)
+        return () => {
+            window.removeEventListener("scroll", handleScroll)
+        }
+    }, [])
 
     return (
         
         <>
         <header id="header">
-            <div className="py-5 bg-[#0A0F1C] font-geist fixed w-full top-0 left-0">
+            <div className={`py-5 font-geist fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
+                isScrolled 
+                ? "bg-[#0A0F1C]/70 backdrop-blur-md shadow-lg py-3"
+                : "bg-[#0A0F1C] py-5"
+            }`}>
                 <Container>
                     <div className="flex justify-between items-center">
                         {/* logo */}
