@@ -1,15 +1,15 @@
 import { tech1, tech2, tech3, tech4, tech5 } from "./teckStack";
-import p1 from '../../assets/p1.png'
 import orebi from '../../assets/orebi.png'
 import port from '../../assets/port.png'
 import eduact from '../../assets/eduact.png'
 import creative from '../../assets/creative.png'
+import roiser from '../../assets/roiser.png'
 
 export const allProjects = [
     {
         id : 1 ,
         projectImg: orebi,
-        projectName:"Orebi",
+        projectName:"Orebi e-Commerce",
         projectType:'Personal Project',
         projectDetails:'A modern web application to manage online retail operations, including product cataloging, customer orders, and interactive UI for a smooth shopping experience.',
         techStack:tech1,
@@ -41,19 +41,19 @@ export const allProjects = [
         projectImg: creative,
         projectName:"Creative IT ( Web & Software )",
         projectType:'Team Project',
-        projectDetails:'A modern car brand website featuring product showcases, model comparisons, booking test drives, and dealership locator.',
+        projectDetails:"A dedicated web platform for an Creative IT's Web & Software department, featuring a streamlined student enrollment process and curriculum details.",
         techStack:tech4,
         liveLink:'https://creative-web-six.vercel.app/',
         githubLink:'https://github.com/Sijan666/creativeWeb',
     },
     {
         id : 5 ,
-        projectImg: p1,
-        projectName:"Confer",
-        projectType:'Personal Project',
-        projectDetails:'A system to manage conferences with paper submission, peer review, schedules, and attendee registration.',
+        projectImg: roiser,
+        projectName:"Roiser e-Commerce",
+        projectType:'Team Project',
+        projectDetails:'A modern e-commerce platform designed for a fashion brand, featuring intuitive product browsing, category filtering, and a seamless online shopping experience.',
         techStack:tech5,
-        liveLink:'https://main-portfolio-two-khaki.vercel.app/',
-        githubLink:'https://github.com/Sijan666/mainPortfolio',
+        liveLink:'https://roiser-team.vercel.app/',
+        githubLink:'https://github.com/Sijan666/roiserTeam',
     },
 ]
