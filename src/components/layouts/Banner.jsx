@@ -15,7 +15,7 @@ const Banner = () => {
                         {/* heading */}
                         <h1 className="text-[30px] lg:text-[72px] font-bold text-[#EDEDED]">A Fabulous</h1>
                         <h2 className="text-[30px] lg:text-[72px] font-bold text-[#FE9A00]">Frontend Developer</h2>
-                        <p className="py-10 text-[#EDEDED] text-sm lg:text-base leading-6 lg:w-[685px] mx-auto">Hi, My name is Majharul Islam, and I am a Frontend developer from Bangladesh . I specialize in building modern, responsive web applications.</p>
+                        <p className="py-10 text-[#EDEDED] text-sm lg:text-base leading-6 lg:w-[685px] mx-auto">Hi, I’m Majharul Islam Sijan . A passionate Front-End Developer from Bangladesh . Always curious to learn, explore and collaborate.</p>
                         <div className="flex flex-col lg:flex-row justify-center gap-y-8 gap-x-8">
                             {/* btn */}
                             <Button btnText={'View Projects'} className={'px-5 py-2 bg-[#2B7FFE] text-white text-sm rounded-md'}/>
