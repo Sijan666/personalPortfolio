@@ -4,8 +4,15 @@ import { LuMail } from 'react-icons/lu'
 import { MdOutlineContactPage } from 'react-icons/md'
 import { FaDiscord, FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { GrInstagram } from 'react-icons/gr'
+import Button from '../Button'
 
 const Contact = () => {
+
+    const handleFormSubmit = (e) => {
+    e.preventDefault();
+    console.log("Button clicked, kintu page reload hocche na!");
+}
+
     return (
         <>
         <section id='contact'>
@@ -68,11 +75,18 @@ const Contact = () => {
                                         {/* contact */}
                                         <div className="mt-5">
                                             <div className="socialIcons flex lg:gap-x-5 gap-x-8 items-center text-white/50">
-                                                <FaGithub size={22} className="cursor-pointer hover:text-[#2B7FFE] duration-300"/>
-                                                <FaLinkedin size={22} className="cursor-pointer hover:text-[#2B7FFE] duration-300"/>
-                                                <FaFacebook size={22} className="cursor-pointer hover:text-[#2B7FFE] duration-300"/>
-                                                <GrInstagram size={22} className="cursor-pointer hover:text-[#2B7FFE] duration-300"/>
-                                                <FaDiscord size={22} className="cursor-pointer hover:text-[#2B7FFE] duration-300"/>
+                                                <a href="https://github.com/Sijan666" target="_blank">
+                                                    <FaGithub size={22} className="cursor-pointer hover:text-[#2B7FFE] duration-300"/>
+                                                </a>
+                                                <a href="https://www.linkedin.com/in/majharulislamdev/" target="_blank">
+                                                    <FaLinkedin size={22} className="cursor-pointer hover:text-[#2B7FFE] duration-300"/>
+                                                </a>
+                                                <a href="https://www.facebook.com/majharul.islam.666/" target="_blank">
+                                                    <FaFacebook size={22} className="cursor-pointer hover:text-[#2B7FFE] duration-300"/>
+                                                </a>
+                                                <a href="https://instagram.com/majharul_sijan" target="_blank">
+                                                    <GrInstagram size={22} className="cursor-pointer hover:text-[#2B7FFE] duration-300"/>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -81,7 +95,7 @@ const Contact = () => {
                             {/* right Form */}
                             <div className="rightForm lg:w-1/2 w-full">
                                 <div className="bg-white/2 border border-white/5 rounded-xl p-5 ">
-                                    <form className='flex flex-col gap-4'>
+                                    <form onSubmit={handleFormSubmit} className='flex flex-col gap-4'>
                                         {/* name */}
                                         <div className="name">
                                             <h4 className='text-sm text-white/70 pb-4'>Name</h4>
@@ -113,6 +127,10 @@ const Contact = () => {
                                                 <textarea id="message" placeholder=" "className="textarea"></textarea>
                                                 <label htmlFor="message" className="textarea-label">Enter your message</label>
                                             </div>
+                                        </div>
+                                        {/* btn */}
+                                        <div className="btn">
+                                            <Button btnText={"Send Message"} className={'py-2 bg-[#2B7FFE] text-base leading-6 text-white/90 rounded-md  w-full'}/>
                                         </div>
                                     </form>
                                 </div>

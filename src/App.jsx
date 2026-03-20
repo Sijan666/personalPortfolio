@@ -1,6 +1,5 @@
 import { Routes , Route } from 'react-router-dom'
 import { ReactLenis } from 'lenis/react' 
-
 import Home from './components/pages/Home'
 import RootLayouts from './components/layouts/RootLayouts'
 import Error from './components/pages/Error'
