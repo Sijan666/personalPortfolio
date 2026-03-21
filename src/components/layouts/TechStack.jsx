@@ -14,13 +14,13 @@ const TechStack = () => {
     return (
         <>
         <section id='techStack'>
-            <div className="py-25 bg-[#0A0F1C] font-geist">
+            <div className="lg:py-25 py-10 bg-[#0A0F1C] font-geist">
                 <Container>
                     {/* heading text */}
-                    <div className="heading">
-                        <h3 className='text-[36px] font-bold text-[#EDEDED] beforeAfter'>Tech Stack</h3>
+                    <div className="heading text-center lg:text-left">
+                        <h3 className='lg:text-[36px] text-[30px] font-bold text-[#EDEDED] beforeAfter '>Tech Stack</h3>
                     </div>
-                    <div className="mt-8">
+                    <div className="mt-8 text-center lg:text-left">
                         <p className='text-bsae text-[#99A1AF] lg:w-[559px] leading-6'>From frontend frameworks to backend systems, databases, DevOps, and key development principle this is my tech toolkit.</p>
                     </div>
                     <div className="mt-10">

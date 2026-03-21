@@ -69,28 +69,32 @@ const Header = () => {
                         </nav>
                         {/* mobile display navbar */}
                         <div className="mobileNav lg:hidden">
-                            <FaBarsStaggered onClick={handleShow} size={20} className="text-white relative"/>
-                            {show && (
-                            <nav className="absolute top-20 left-1/2 -translate-x-1/2 w-[90%] bg-white/10 backdrop-blur-2xl rounded-md p-5">
+                            <FaBarsStaggered onClick={handleShow} size={20} className="text-white relative z-50 cursor-pointer hover:text-gray-300 transition-colors"/>
+                            <nav 
+                                className={`absolute left-1/2 -translate-x-1/2 w-[90%] bg-white/10 backdrop-blur-2xl border border-white/10 rounded-2xl p-5 shadow-2xl transition-all duration-300 ease-out origin-top ${
+                                    show 
+                                    ? "top-20 opacity-100 scale-100 visible" 
+                                    : "top-16 opacity-0 scale-95 invisible"
+                                }`}
+                            >
                                 <ul className="flex flex-col lg:flex-row gap-x-5 text-white items-center gap-y-5 justify-center overflow-hidden">
-                                    <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">
-                                        <SmoothLink href="/">Home</SmoothLink>
+                                    <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer hover:text-white transition-colors duration-200">
+                                        <SmoothLink href="#header">Home</SmoothLink>
                                     </li>
-                                    <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">
+                                    <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer hover:text-white transition-colors duration-200">
                                         <SmoothLink href="#about">About Me</SmoothLink>
                                     </li>
-                                    <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">
+                                    <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer hover:text-white transition-colors duration-200">
                                         <SmoothLink href="#techStack">Tech Stack</SmoothLink>
                                     </li>
-                                    <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">
+                                    <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer hover:text-white transition-colors duration-200">
                                         <SmoothLink href="#projects">Projects</SmoothLink>
                                     </li>
-                                    <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer">
+                                    <li className="text-[#99A1AF] text-base font-medium leading-6 cursor-pointer hover:text-white transition-colors duration-200">
                                         <SmoothLink href="#contact">Contact</SmoothLink>
                                     </li>
                                 </ul>
                             </nav>
-                            )}
                         </div>
                     </div>
                 </Container>

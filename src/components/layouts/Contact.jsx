@@ -34,12 +34,12 @@ const Contact = () => {
     return (
         <>
         <section id='contact'>
-            <div className="py-25 bg-[#0A0F1C] font-geist">
+            <div className="lg:py-25 py-10 bg-[#0A0F1C] font-geist">
                 <Container>
                     {/* heading text */}
                     <div className="heading text-center lg:text-left">
-                        <h3 className='text-[25px] lg:text-[36px] font-bold text-[#EDEDED] beforeAfter'>Contact Me</h3>
-                        <p className='text-bsae text-[#99A1AF] lg:w-[559px] leading-6 pt-8'>I'm always happy to discuss opportunities, answer questions, or explore new ideas. Send a message or connect online.</p>
+                        <h3 className='text-[30px] lg:text-[36px] font-bold text-[#EDEDED] beforeAfter'>Contact Me</h3>
+                        <p className='text-base text-[#99A1AF] lg:w-[559px] leading-6 pt-8'>I'm always happy to discuss opportunities, answer questions, or explore new ideas. Send a message or connect online.</p>
                     </div>
                     <div className="mt-10">
                         <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-10">
