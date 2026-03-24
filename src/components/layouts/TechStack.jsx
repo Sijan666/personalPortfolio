@@ -47,32 +47,32 @@ const TechStack = () => {
                                         <IoLogoCss3 size={16} className='text-[#007ACC]' />
                                         <h4 className='text-[#D1D5DC] text-[12px] font-medium'>CSS3</h4>
                                     </div>
-                                    {/* 1st */}
+                                    {/* 3 */}
                                     <div className="py-2 px-3 bg-[#FFFFFF]/5 border border-[#FFFFFF]/10 rounded-md flex items-center gap-x-2">
                                         <SiJavascript  size={16} className='text-[#F7DF1E]' />
                                         <h4 className='text-[#D1D5DC] text-[12px] font-medium'>JavaScript</h4>
                                     </div>
-                                    {/* 1st */}
+                                    {/* 4 */}
                                     <div className="py-2 px-3 bg-[#FFFFFF]/5 border border-[#FFFFFF]/10 rounded-md flex items-center gap-x-2">
                                         <SiTypescript  size={16} className='text-[#3178C6]' />
                                         <h4 className='text-[#D1D5DC] text-[12px] font-medium'>TypeScript</h4>
                                     </div>
-                                    {/* 1st */}
+                                    {/* 5 */}
                                     <div className="py-2 px-3 bg-[#FFFFFF]/5 border border-[#FFFFFF]/10 rounded-md flex items-center gap-x-2">
                                         <FaReact  size={16} className='text-[#61DAFB]' />
                                         <h4 className='text-[#D1D5DC] text-[12px] font-medium'>React.js</h4>
                                     </div>
-                                    {/* 1st */}
+                                    {/* 6 */}
                                     <div className="py-2 px-3 bg-[#FFFFFF]/5 border border-[#FFFFFF]/10 rounded-md flex items-center gap-x-2">
                                         <RiNextjsFill  size={16} className='text-[#000000]' />
                                         <h4 className='text-[#D1D5DC] text-[12px] font-medium'>Next.js</h4>
                                     </div>
-                                    {/* 1st */}
+                                    {/* 7 */}
                                     <div className="py-2 px-3 bg-[#FFFFFF]/5 border border-[#FFFFFF]/10 rounded-md flex items-center gap-x-2">
                                         <SiRedux  size={16} className='text-[#764ABC]' />
                                         <h4 className='text-[#D1D5DC] text-[12px] font-medium'>Redux</h4>
                                     </div>
-                                    {/* 1st */}
+                                    {/* 8 */}
                                     <div className="py-2 px-3 bg-[#FFFFFF]/5 border border-[#FFFFFF]/10 rounded-md flex items-center gap-x-2">
                                         <RiTailwindCssFill  size={16} className='text-[#06B6D4]' />
                                         <h4 className='text-[#D1D5DC] text-[12px] font-medium'>Tailwind CSS</h4>
@@ -139,7 +139,7 @@ const TechStack = () => {
                                         <FaInfinity   size={20} className='text-[#2B7FFE]'/>
                                     </div>
                                     <div className="text">
-                                        <h4 className='text-base text-[#EDEDED] font-medium'>DevOps <span className='text-[12px] text-[#FE626B]'>(Beginner)</span></h4>
+                                        <h4 className='text-base text-[#EDEDED] font-medium'>DevOps <span className='text-[12px] text-[#4AD08E]'>(Advanced)</span></h4>
                                         <p className='text-[#6A7282] text-sm'>Deployment, CI/CD, and server management.</p>
                                     </div>
                                 </div>
@@ -227,7 +227,7 @@ const TechStack = () => {
                                         <RiGraduationCapFill    size={20} className='text-[#2B7FFE]'/>
                                     </div>
                                     <div className="text">
-                                        <h4 className='text-base text-[#EDEDED] font-medium'>Fundamentals   <span className='text-[12px] text-[#2B7FFE]'>(Intermediate)</span></h4>
+                                        <h4 className='text-base text-[#EDEDED] font-medium'>Fundamentals   <span className='text-[12px] text-[#4AD08E]'>(Advanced)</span></h4>
                                         <p className='text-[#6A7282] text-sm'>Core web development concepts and best practices.</p>
                                     </div>
                                 </div>
