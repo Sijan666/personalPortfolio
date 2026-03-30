@@ -54,7 +54,7 @@ const About = () => {
                                 </div>
                                 {/* btn */}
                                 <div className="btn mt-5">
-                                    <a href="/src/assets/resumeMajharul.pdf">
+                                    <a href="/resumeMajharul.pdf" download="Majharul_Islam_Resume.pdf">
                                     <button className='py-2 px-3 bg-[#2B7FFE] text-white text-sm font-medium rounded-md flex items-center gap-x-2 cursor-pointer mx-auto lg:mx-0'><MdOutlineFileDownload size={20}/>Download Resume</button>
                                     </a>
                                 </div>
