@@ -142,7 +142,7 @@ const Contact = () => {
                                         <div className="message">
                                             <h4 className='text-sm text-white/70 pb-4'>Message</h4>
                                             <div className="textarea-container w-full">
-                                                <textarea id="message" name="message" placeholder=" "className="textarea"></textarea>
+                                                <textarea id="message" rows={5} cols={10} name="message" placeholder=" "className="textarea"></textarea>
                                                 <label htmlFor="message" className="textarea-label">Enter your message</label>
                                             </div>
                                         </div>
