@@ -4,6 +4,7 @@ import port from '../../assets/port.png'
 import eduact from '../../assets/eduact.png'
 import creative from '../../assets/creative.png'
 import roiser from '../../assets/roiser.png'
+import cabbage from '../../assets/cabbage.png'
 
 export const allProjects = [
     {
@@ -43,7 +44,7 @@ export const allProjects = [
         projectType:'Team Project',
         projectDetails:"A dedicated web platform for an Creative IT's Web & Software department, featuring a streamlined student enrollment process and curriculum details.",
         techStack:tech4,
-        liveLink:'https://creative-web-six.vercel.app/',
+        liveLink:'https://mern.creativeitinstitute.com/',
         githubLink:'https://github.com/Sijan666/creativeWeb',
     },
     {
@@ -55,5 +56,15 @@ export const allProjects = [
         techStack:tech5,
         liveLink:'https://roiser-team.vercel.app/',
         githubLink:'https://github.com/Sijan666/roiserTeam',
+    },
+    {
+        id : 6 ,
+        projectImg: cabbage,
+        projectName:"Cabbage e-Commerce",
+        projectType:'Team Project',
+        projectDetails:'Cabbage eCommerce - A fast, scalable, and responsive frontend for an online store. Built using React.js and styled with Shadcn UI components.',
+        techStack:tech5,
+        liveLink:'https://cabbagee-commerce.vercel.app/',
+        githubLink:'https://github.com/Sijan666/cabbageeCommerce',
     },
 ]
