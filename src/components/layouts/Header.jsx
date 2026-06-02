@@ -62,7 +62,7 @@ const Header = () => {
                         <div className="lg:hidden relative z-50 flex items-center">
                             <button 
                                 onClick={handleShow}
-                                className="p-2 text-white hover:text-blue-400 transition-colors focus:outline-none"
+                                className="p-2 text-white focus:outline-none"
                                 aria-label="Toggle Menu">
                                 {show ? <FaXmark size={24} /> : <FaBarsStaggered size={22} />}
                             </button>
