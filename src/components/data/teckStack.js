@@ -1,4 +1,3 @@
-
 export const tech1 = [
     {
         id : 1 , 

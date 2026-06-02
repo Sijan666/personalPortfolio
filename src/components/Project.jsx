@@ -21,7 +21,6 @@ const allTechIcons = {
     "jQuery": <SiJquery    className="text-[##186EB1]"/>,
 };
 
-
     return (
         <>
         <div className={`${className} p-3 border border-white/5 rounded-xl bg-white/2 font-geist flex flex-col h-full`}>

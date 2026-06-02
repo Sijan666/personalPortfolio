@@ -5,7 +5,6 @@ import { GrInstagram } from "react-icons/gr"
 import { Typewriter } from "react-simple-typewriter"
 
 
-
 const Banner = () => {
     return (
         <>
