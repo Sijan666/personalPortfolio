@@ -46,13 +46,16 @@ const Header = () => {
                         <nav className="hidden lg:block">
                             <ul className="flex gap-x-10 items-center">
                                 {navLinks.map((link, index) => (
-                                    <li key={index} className="group relative">
+                                    <li key={index} className="group cursor-pointer overflow-hidden">
                                         <SmoothLink href={link.href}>
-                                            <span className="text-[#99A1AF] text-sm font-medium tracking-wide uppercase group-hover:text-white transition-colors duration-300">
-                                                {link.name}
+                                            <span className="relative block overflow-hidden">
+                                                <span className="block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-full text-[#99A1AF] text-sm font-medium tracking-widest uppercase">
+                                                    {link.name}
+                                                </span>
+                                                <span className="absolute inset-0 block translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:translate-y-0 text-white text-sm font-medium tracking-widest uppercase">
+                                                    {link.name}
+                                                </span>
                                             </span>
-                                            {/* 4. Premium Animated Gradient Underline */}
-                                            <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-linear-to-r from-blue-500 to-purple-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left rounded-full"></span>
                                         </SmoothLink>
                                     </li>
                                 ))}
