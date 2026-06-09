@@ -52,10 +52,10 @@ const About = () => {
                                     <p className='pt-1 text-white/60 text-[12px] lg:text-sm'>Frontend Developer (React.js & Next.js)</p>
                                     <p className='pt-1 text-white/60 text-[12px] lg:text-sm'>Creating High-Performance, Modern Web Applications</p>
                                 </div>
-                                {/* btn */}
-                                <div className="btn mt-5">
-                                    <a href="/resumeMajharul.pdf" download="Majharul_Islam_Resume.pdf">
-                                    <button className='py-2 px-3 bg-[#2B7FFE] text-white text-sm font-medium rounded-md flex items-center gap-x-2 cursor-pointer mx-auto lg:mx-0'><MdOutlineFileDownload size={20}/>Download Resume</button>
+                                <div className="btn mt-5 flex justify-center lg:justify-start">
+                                    <a href="/resumeMajharul.pdf" download="Majharul_Islam_Resume.pdf" className="py-2 px-3 text-white text-sm font-medium inline-flex items-center gap-x-2 cursor-pointer border border-[#374151] rounded-md hover:bg-[#1F2937] transition-all duration-300">
+                                    <MdOutlineFileDownload size={20} />
+                                        Download Resume
                                     </a>
                                 </div>
                             </div>
