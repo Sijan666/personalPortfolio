@@ -1,27 +1,29 @@
-import { Routes , Route } from 'react-router-dom'
+import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import { ReactLenis } from 'lenis/react' 
 import Home from './components/pages/Home'
 import RootLayouts from './components/layouts/RootLayouts'
 import Error from './components/pages/Error'
+import Preloader from './components/Preloader'
 
 function App () {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <ReactLenis 
-      root 
-      options={{
-        lerp: 0.05,
-        duration: 1.5,
-        smoothWheel: true, 
-        wheelMultiplier: 0.8,
-      }}
-    >
-      <Routes>
-        <Route path="/" element={<RootLayouts />}>
-          <Route index element={<Home/>} />
-        </Route>
-        <Route path="*" element={<Error/>} />
-      </Routes>
-    </ReactLenis>
+    <>
+      {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
+
+      <div className={`${isLoading ? 'h-screen overflow-hidden' : ''}`}>
+        <ReactLenis root options={{lerp: 0.05, duration: 1.5, smoothWheel: true, wheelMultiplier: 0.8}}>
+          <Routes>
+            <Route path="/" element={<RootLayouts />}>
+              <Route index element={<Home/>} />
+            </Route>
+            <Route path="*" element={<Error/>} />
+          </Routes>
+        </ReactLenis>
+      </div>
+    </>
   )
 }
 
