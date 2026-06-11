@@ -141,12 +141,7 @@ const Contact = () => {
                                         <div className="subject">
                                             <h4 className='text-sm text-white/70 pb-4'>Subject</h4>
                                             <div className="input-container">
-                                                <input 
-                                                    type="text" 
-                                                    {...register("subject")}
-                                                    placeholder=" " 
-                                                    className={`input ${errors.subject ? 'border-red-500' : ''}`}
-                                                />
+                                                <input type="text" {...register("subject")} placeholder=" " className={`input ${errors.subject ? 'border-red-500' : ''}`}/>
                                                 <label className="label">Enter subject</label>
                                             </div>
                                             {errors.subject && <span className="text-red-500 text-xs mt-1 block">{errors.subject.message}</span>}
@@ -155,25 +150,15 @@ const Contact = () => {
                                         <div className="message">
                                             <h4 className='text-sm text-white/70 pb-4'>Message</h4>
                                             <div className="textarea-container w-full">
-                                                <textarea 
-                                                    id="message" 
-                                                    rows={5} 
-                                                    {...register("message")}
-                                                    placeholder=" "
-                                                    className={`textarea ${errors.message ? 'border-red-500' : ''}`}
-                                                ></textarea>
+                                                <textarea id="message" rows={5} {...register("message")} placeholder=" " className={`textarea ${errors.message ? 'border-red-500' : ''}`}>
+                                                </textarea>
                                                 <label htmlFor="message" className="textarea-label">Enter your message</label>
                                             </div>
                                             {errors.message && <span className="text-red-500 text-xs mt-1 block">{errors.message.message}</span>}
                                         </div>
                                         {/* Submit Button */}
                                         <div className="btn">
-                                            <Button 
-                                                btnText={isSubmitting ? "Sending..." : "Send Message"} 
-                                                type="submit" 
-                                                disabled={isSubmitting}
-                                                className={`py-2 text-base leading-6 text-white/90 rounded-md w-full ${isSubmitting ? 'bg-[#2B7FFE]/70 cursor-not-allowed' : 'bg-[#2B7FFE]'}`}
-                                            />
+                                            <Button btnText={isSubmitting ? "Sending..." : "Send Message"} type="submit" disabled={isSubmitting} className={`py-2 text-base leading-6 text-white/90 rounded-md w-full ${isSubmitting ? 'bg-[#2B7FFE]/70 cursor-not-allowed' : 'bg-[#2B7FFE]'}`}/>
                                         </div>
                                     </form>
                                 </div>
