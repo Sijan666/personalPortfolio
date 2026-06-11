@@ -1,5 +1,5 @@
 import Container from '../Container';
-import { LuMail } from 'react-icons/lu';
+import { LuMail, LuMap, LuMapPin, LuPhone } from 'react-icons/lu';
 import { MdOutlineContactPage } from 'react-icons/md';
 import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { GrInstagram } from 'react-icons/gr';
@@ -73,14 +73,14 @@ const Contact = () => {
                                                 </div>
                                             </div>
                                             <div className="flex gap-x-3 mt-4">
-                                                <LuMail size={22} className='text-[#2B7FFE]'/>
+                                                <LuPhone size={22} className='text-[#2B7FFE]'/>
                                                 <div className="text">
                                                     <h4 className='text-[12px] lg:text-sm font-medium leading-5 text-[#EDEDED]'>Phone</h4>
                                                     <h5 className='pt-1 text-[12px] lg:text-sm text-white/70'>+8801828871277</h5>
                                                 </div>
                                             </div>
                                             <div className="flex gap-x-3 mt-4">
-                                                <LuMail size={22} className='text-[#2B7FFE]'/>
+                                                <LuMapPin size={22} className='text-[#2B7FFE]'/>
                                                 <div className="text">
                                                     <h4 className='text-sm font-medium leading-5 text-[#EDEDED]'>Location</h4>
                                                     <h5 className='pt-1 text-[12px] lg:text-sm text-white/70'>Dhaka, Bangladesh</h5>
