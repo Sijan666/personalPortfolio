@@ -70,10 +70,10 @@ const About = () => {
                             </div>
                             {/* btn */}
                             <div className="mt-8 w-full flex justify-center lg:justify-start">
-                                <a href="/resumeMajharul.pdf" download="Majharul_Islam_Resume.pdf" className="px-6 py-2.5 w-full justify-center text-sm font-medium tracking-wide text-[#fe9a00] bg-[#fe9a00]/10 border border-[#fe9a00]/30 rounded-xl hover:bg-[#fe9a00] hover:text-white hover:shadow-[0_0_15px_rgba(254,154,0,0.5)] transition-all duration-300 inline-flex items-center gap-x-2 group">
+                                {/* <a href="/resumeMajharul.pdf" download="Majharul_Islam_Resume.pdf" className="px-6 py-2.5 w-full justify-center text-sm font-medium tracking-wide text-[#fe9a00] bg-[#fe9a00]/10 border border-[#fe9a00]/30 rounded-xl hover:bg-[#fe9a00] hover:text-white hover:shadow-[0_0_15px_rgba(254,154,0,0.5)] transition-all duration-300 inline-flex items-center gap-x-2 group">
                                     <MdOutlineFileDownload size={20} />
                                     Download Resume
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </div>
