@@ -8,62 +8,79 @@ import { MdOutlineFileDownload } from 'react-icons/md'
 
 const About = () => {
     return (
-        <section id='about'>
-            <div className="py-10 bg-[#0A0F1C] font-geist">
+        <>
+        <section id='about' className="relative bg-[#0a0f1c] overflow-hidden w-full max-w-full">
+            <div className="absolute top-[30%] left-[-10%] w-[300px] h-[300px] bg-[#fe9a00] blur-[120px] opacity-10 pointer-events-none"></div>
+            <div className="py-15 lg:py-25 font-geist relative z-10 w-full">
                 <Container>
                     {/* heading text */}
-                    <div className="heading text-center lg:text-left">
-                        <h3 className='text-[30px] lg:text-[36px] font-bold text-[#EDEDED] beforeAfter'>About Me</h3>
+                    <div className="heading text-center lg:text-left mb-12 lg:mb-16">
+                        <h3 className='text-[30px] lg:text-[40px] font-bold text-[#ededed] inline-block relative'>
+                            About Me
+                            <span className="absolute -bottom-2 left-0 w-1/2 h-0.5 bg-linear-to-r from-[#fe9a00] to-transparent"></span>
+                        </h3>
                     </div>
-                    <div className="lg:mt-[72px] mt-[50px]">
-                        <div className="flex flex-col lg:flex-row gap-y-10 justify-between">
-                            {/* left side */}
-                            <div className="left lg:w-[816px]">
-                                {/* 1st chapter */}
-                                <div className="bio flex gap-x-3">
-                                    <div className="p-[9px] h-10 w-10 border border-[#2B7FFE] rounded-md ">
-                                        <LuFileSpreadsheet size={20} className='text-[#2B7FFE]' />
-                                    </div>
-                                    <div className="text">
-                                        <h4 className='text-[18px] font-medium text-[#2B7FFE]'>Bio</h4>
-                                        <p className='text-white/60 text-base pt-3.5'>Frontend Developer with 1+ year of experience building responsive and scalable web applications using React and Next.js. Skilled in turning UI/UX designs into pixel-perfect, high-performing code, with a strong focus on clean architecture, performance optimization, and modern frontend practices.</p>
-                                    </div>
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
+                        {/* left side */}
+                        <div className="left lg:col-span-8 w-full flex flex-col gap-6">
+                            {/* bio */}
+                            <div className="bio flex flex-col md:flex-row gap-5 p-6 lg:p-8 bg-white/2 border border-white/5 backdrop-blur-xl rounded-3xl hover:bg-white/3 hover:border-white/8 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
+                                <div className="p-3 h-12 w-12 shrink-0 flex items-center justify-center bg-[#fe9a00]/10 border border-[#fe9a00]/20 rounded-xl">
+                                    <LuFileSpreadsheet size={22} className='text-[#fe9a00]' />
                                 </div>
-                                {/* 2nd chapter */}
-                                <div className="experience flex gap-x-3 mt-10">
-                                    <div className="p-[9px] h-10 w-10 border border-[#2B7FFE] rounded-md ">
-                                        <PiBagSimple size={20} className='text-[#2B7FFE]' />
-                                    </div>
-                                    <div className="text">
-                                        <h4 className='text-[18px] font-medium text-[#2B7FFE]'>Experience</h4>
-                                        <h4 className='text-[#EDEDED] text-base pt-3.5'>Front-end Developer (Intern)</h4>
-                                        <p className='pt-1 text-white/60 text-base'>Creative IT</p>
-                                        <p className='pt-1 text-white/60 text-base'>January 2026 - Present</p>
+                                <div className="text flex-1">
+                                    <h4 className='text-[20px] font-semibold text-[#ededed] mb-3'>Bio</h4>
+                                    <p className='text-[#ededed]/60 text-[15px] leading-relaxed font-light wrap-break-word'>
+                                        Frontend Developer with 1+ year of experience building responsive and scalable web applications using React and Next.js. Skilled in turning UI/UX designs into pixel-perfect, high-performing code, with a strong focus on clean architecture, performance optimization, and modern frontend practices.
+                                    </p>
+                                </div>
+                            </div>
+                            {/* experience */}
+                            <div className="experience flex flex-col md:flex-row gap-5 p-6 lg:p-8 bg-white/2 border border-white/5 backdrop-blur-xl rounded-3xl hover:bg-white/3 hover:border-white/8 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
+                                <div className="p-3 h-12 w-12 shrink-0 flex items-center justify-center bg-[#fe9a00]/10 border border-[#fe9a00]/20 rounded-xl">
+                                    <PiBagSimple size={22} className='text-[#fe9a00]' />
+                                </div>
+                                <div className="text w-full flex-1">
+                                    <h4 className='text-[20px] font-semibold text-[#ededed] mb-4'>Experience</h4>
+                                    <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-3 pb-4 border-b border-white/5">
+                                        <div>
+                                            <h4 className='text-[#fe9a00] text-base font-medium'>Front-end Developer (Intern)</h4>
+                                            <p className='text-[#ededed]/80 text-sm mt-1'>Creative IT</p>
+                                        </div>
+                                        <div className="px-3 py-1.5 bg-white/3 border border-white/5 rounded-full inline-block w-fit">
+                                            <p className='text-[#ededed]/50 text-xs font-mono tracking-wider'>January 2026 - July 2026</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            {/* right side */}
-                            <div className="right">
-                                {/* img */}
-                                <Images imgSrc={sijan} className={'mx-auto lg:mx-0'}/>
-                                {/* details */}
-                                <div className="mt-5 text-center lg:text-left">
-                                    <h4 className='text-[20px] font-medium text-[#EDEDED]'>Majharul Islam</h4>
-                                    <p className='pt-1 text-white/60 text-[12px] lg:text-sm'>Frontend Developer (React.js & Next.js)</p>
-                                    <p className='pt-1 text-white/60 text-[12px] lg:text-sm'>Creating High-Performance, Modern Web Applications</p>
+                        </div>
+                        {/* right side */}
+                        <div className="right lg:col-span-4 w-full p-6 lg:p-8 bg-white/2 border border-white/5 backdrop-blur-xl rounded-3xl flex flex-col items-center  text-center lg:text-left hover:bg-white/3 hover:border-white/8 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
+                            {/* img */}
+                            <div className="">
+                                <Images imgSrc={sijan} className={'w-32 h-32 lg:w-40 lg:h-40 object-cover rounded-xl'}/>
+                            </div>
+                            {/* details */}
+                            <div className="w-full text-center">
+                                <h4 className='text-[22px] font-bold text-[#ededed] tracking-wide'>Majharul Islam</h4>
+                                <div className="mt-2 space-y-1.5">
+                                    <p className='text-[#fe9a00] text-sm font-medium'>Frontend Developer (React.js & Next.js)</p>
+                                    <p className='text-[#ededed]/50 text-xs leading-relaxed'>Creating High-Performance, Modern Web Applications</p>
                                 </div>
-                                <div className="btn mt-5 flex justify-center lg:justify-start">
-                                    <a href="/resumeMajharul.pdf" download="Majharul_Islam_Resume.pdf" className="py-2 px-3 text-white text-sm font-medium inline-flex items-center gap-x-2 cursor-pointer border border-[#374151] rounded-md hover:bg-[#1F2937] transition-all duration-300">
+                            </div>
+                            {/* btn */}
+                            <div className="mt-8 w-full flex justify-center lg:justify-start">
+                                <a href="/resumeMajharul.pdf" download="Majharul_Islam_Resume.pdf" className="px-6 py-2.5 w-full justify-center text-sm font-medium tracking-wide text-[#fe9a00] bg-[#fe9a00]/10 border border-[#fe9a00]/30 rounded-xl hover:bg-[#fe9a00] hover:text-white hover:shadow-[0_0_15px_rgba(254,154,0,0.5)] transition-all duration-300 inline-flex items-center gap-x-2 group">
                                     <MdOutlineFileDownload size={20} />
-                                        Download Resume
-                                    </a>
-                                </div>
+                                    Download Resume
+                                </a>
                             </div>
                         </div>
                     </div>
                 </Container>
             </div>
         </section>
+        </>
     )
 }
 
