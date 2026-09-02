@@ -4,8 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 const BackToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
     const circleRef = useRef(null);
-
-    /* svg circle dimensions */
+    
     const radius = 22;
     const circumference = 2 * Math.PI * radius;
 
