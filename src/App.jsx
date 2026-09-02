@@ -6,6 +6,7 @@ import RootLayouts from './components/layouts/RootLayouts'
 import Error from './components/pages/Error'
 import Preloader from './components/Preloader'
 import BackToTop from './components/BackToTop'
+import FloatingWhatsApp from './components/FloatingWhatsApp'
 
 function App () {
   const location = useLocation()
@@ -24,6 +25,7 @@ function App () {
             <Route path="*" element={<Error/>} />
           </Routes>
           <BackToTop/>
+          <FloatingWhatsApp/>
         </ReactLenis>
       </div>
     </>
