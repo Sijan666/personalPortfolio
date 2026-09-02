@@ -11,7 +11,6 @@ const FloatingWhatsApp = () => {
                 className="group relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#0a0f1c]/90 backdrop-blur-xl border border-[#25D366]/30 shadow-[0_8px_30px_rgba(0,0,0,0.4)] hover:shadow-[0_0_15px_rgba(37,211,102,0.3)] hover:border-[#25D366]/30 transition-all duration-500 cursor-pointer"
                 aria-label="Chat on WhatsApp"
             >
-                {/* icon */}
                 <FaWhatsapp size={26} className="text-[#25D366] transition-all duration-300" />
             </a>
         </div>
