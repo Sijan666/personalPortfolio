@@ -33,7 +33,7 @@ const Error = () => {
                     </div>
                 </div>
                 <div className="w-full h-px bg-white/10 my-10"></div>
-                {/* Bottom */}
+                {/* bottom */}
                 <div className="errorBtn flex flex-col sm:flex-row items-center justify-between gap-6">
                     <p className="text-white/30 text-xs tracking-wide">
                         MAJHARUL ISLAM
