@@ -5,6 +5,7 @@ import Home from './components/pages/Home'
 import RootLayouts from './components/layouts/RootLayouts'
 import Error from './components/pages/Error'
 import Preloader from './components/Preloader'
+import BackToTop from './components/BackToTop'
 
 function App () {
   const location = useLocation()
@@ -22,6 +23,7 @@ function App () {
             </Route>
             <Route path="*" element={<Error/>} />
           </Routes>
+          <BackToTop/>
         </ReactLenis>
       </div>
     </>
