@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react"
 const Error = () => {
     return (
         <div className="relative min-h-screen bg-[#0a0a0a] flex items-center justify-center px-4 py-20">
-            {/* corner brackets */}
+            {/* corner */}
             <div className="absolute top-8 left-8 w-8 h-8 border-t border-l border-white/20"></div>
             <div className="absolute top-8 right-8 w-8 h-8 border-t border-r border-white/20"></div>
             <div className="absolute bottom-8 left-8 w-8 h-8 border-b border-l border-white/20"></div>
