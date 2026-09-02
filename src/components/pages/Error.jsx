@@ -10,7 +10,7 @@ const Error = () => {
             <div className="absolute bottom-8 left-8 w-8 h-8 border-b border-l border-white/20"></div>
             <div className="absolute bottom-8 right-8 w-8 h-8 border-b border-r border-white/20"></div>
             <div className="relative w-full max-w-3xl border border-white/10 rounded-2xl bg-white/2 backdrop-blur-sm px-8 py-14 md:px-16 md:py-20">
-                {/* Status badge */}
+                {/* Status */}
                 <div className="flex items-center gap-2 mb-8">
                     <span className="w-2 h-2 rounded-full bg-orange-500"></span>
                     <span className="text-white/50 text-xs tracking-[0.25em] uppercase font-medium">
