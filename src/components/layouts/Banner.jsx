@@ -4,9 +4,9 @@ import Container from "../Container"
 import SmoothLink from "../SmoothLink"
 
 const PROBLEMS = [
-    { problem: "Slow, manual workflows", fix: "AI agents that take over the repetitive work" },
-    { problem: "Knowledge buried in docs", fix: "Assistants that answer from your own data" },
-    { problem: "Ideas with no tech plan", fix: "Full-stack products, architected and shipped" },
+    { problem: "Manual & slow workflows", fix: "Custom AI Agents that automate repetitive tasks" },
+    { problem: "Unused business data", fix: "RAG pipelines & AI assistants for instant insights" },
+    { problem: "Stuck at the idea stage", fix: "Scalable full-stack products, built and shipped" },
 ]
 
 const SOCIALS = [
