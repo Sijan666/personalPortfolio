@@ -24,7 +24,7 @@ const EXPERIENCES = [
 const About = () => {
     return (
         <section id='about' className="relative bg-[#0a0f1c] overflow-hidden w-full max-w-full selection:bg-[#fe9a00] selection:text-[#0a0f1c]">
-            {/* Immersive Ambient Glow */}
+            {/* Glow */}
             <div className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#fe9a00]/10 blur-[150px] opacity-70 pointer-events-none"></div>
             <div className="absolute bottom-[-10%] right-[-5%] w-[400px] h-[400px] rounded-full bg-blue-900/10 blur-[120px] opacity-50 pointer-events-none"></div>
             <div className="py-20 lg:py-32 font-geist relative z-10 w-full">
