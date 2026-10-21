@@ -74,6 +74,7 @@ const Card = ({ className = "", delay = 0, children }) => {
     )
 }
 
+// eslint-disable-next-line no-unused-vars
 const CardHead = ({ Icon, title, desc }) => (
     <div className="relative flex items-center gap-4">
         <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#fe9a00]/20 bg-[#fe9a00]/10">
@@ -87,6 +88,7 @@ const CardHead = ({ Icon, title, desc }) => (
 )
 
 // grey icon
+// eslint-disable-next-line no-unused-vars
 const Chip = ({ name, Icon, color }) => (
     <span style={{ "--brand": color }} className="group/chip inline-flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/4 px-3.5 py-2 text-[13px] font-medium text-gray-300 transition-colors duration-300 hover:border-[#fe9a00]/30 hover:bg-white/8 hover:text-white motion-reduce:transition-none">
         <Icon size={18} className="text-gray-500 transition-colors duration-300 group-hover/chip:text-(--brand)" />
@@ -158,6 +160,7 @@ const TechStack = () => (
                     <Card className="lg:col-span-12">
                         <CardHead Icon={RiGraduationCapFill} title="Principles" desc="How I build, whatever the stack." />
                         <ul className="relative mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                            {/* eslint-disable-next-line no-unused-vars */}
                             {PRINCIPLES.map(([name, Icon]) => (
                                 <li key={name} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/4 p-4 text-sm font-medium text-gray-200">
                                     <Icon size={20} className="shrink-0 text-[#fe9a00]" />
