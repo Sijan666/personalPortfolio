@@ -17,7 +17,6 @@ const contactSchema = z.object({
 });
 
 const Contact = () => {
-
     const {
         register,
         handleSubmit,
@@ -49,17 +48,17 @@ const Contact = () => {
             {/* Background Glows */}
             <div className="absolute top-[20%] left-[-10%] w-[400px] h-[400px] bg-[#fe9a00]/10 blur-[150px] pointer-events-none rounded-full"></div>
             <div className="absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] bg-blue-900/10 blur-[150px] pointer-events-none rounded-full"></div>
-            <div className="lg:py-32 py-20 font-geist relative z-10 w-full">
+            <div className="py-16 sm:py-24 lg:py-32 font-geist relative z-10 w-full">
                 <Container>
-                    <div className="flex flex-col items-center lg:items-start mb-16 lg:mb-20 w-full">
-                        <div className="flex items-center gap-4 mb-4 w-full">
+                    <div className="flex flex-col items-center lg:items-start mb-12 sm:mb-16 lg:mb-20 w-full min-w-0">
+                        <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4 w-full min-w-0">
                             <span className="hidden lg:block h-px w-12 bg-[#fe9a00]" />
-                            <h2 className='text-4xl lg:text-5xl font-bold text-white tracking-tight whitespace-nowrap'>
+                            <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight shrink-0'>
                                 Contact <span className="text-transparent bg-clip-text bg-linear-to-r from-[#fe9a00] to-yellow-500">Me</span>
                             </h2>
-                            <span className="h-px flex-1 bg-linear-to-r from-[#fe9a00]/50 to-transparent" />
+                            <span className="h-px flex-1 bg-linear-to-r from-[#fe9a00]/50 to-transparent min-w-2.5" />
                         </div>
-                        <p className='text-base lg:text-lg text-gray-400 max-w-2xl text-center lg:text-left leading-relaxed font-light'>
+                        <p className='text-sm sm:text-base lg:text-lg text-gray-400 max-w-2xl text-center lg:text-left leading-relaxed font-light'>
                             I'm always happy to discuss opportunities, answer questions, or explore new ideas. Send a message or connect online.
                         </p>
                     </div>
@@ -79,7 +78,6 @@ const Contact = () => {
                                             <p className='text-gray-400 text-sm font-light mt-1'>Reach me directly via email or phone.</p>
                                         </div>
                                     </div>
-
                                     <div className="flex flex-col gap-6">
                                         {/* Email */}
                                         <div className="flex items-start gap-x-4 group/item">
