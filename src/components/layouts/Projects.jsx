@@ -52,21 +52,21 @@ const Projects = () => {
     }, [])
 
     return (
-        <section id="projects" className="relative w-full overflow-x-clip bg-[#0a0f1c] py-24 font-geist lg:py-32 selection:bg-[#fe9a00] selection:text-[#0a0f1c]">
+        <section id="projects" className="relative w-full overflow-x-clip bg-[#0a0f1c] pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 font-geist selection:bg-[#fe9a00] selection:text-[#0a0f1c]">
             {/* Background Glow */}
             <div aria-hidden="true" className="pointer-events-none absolute -left-[10%] top-[40%] size-[400px] rounded-full bg-[#fe9a00]/10 blur-[150px]" />
             <Container>
-                <div className="relative z-10">
+                <div className="relative z-10 w-full min-w-0">
                     {/* Synchronized Premium Header */}
-                    <div className="flex flex-col items-center lg:items-start mb-16 lg:mb-20 w-full">
-                        <div className="flex items-center gap-4 mb-4 w-full">
+                    <div className="flex flex-col items-center lg:items-start mb-12 sm:mb-16 lg:mb-20 w-full min-w-0">
+                        <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4 w-full min-w-0">
                             <span className="hidden lg:block h-px w-12 bg-[#fe9a00]" />
-                            <h2 className='text-4xl lg:text-5xl font-bold text-white tracking-tight whitespace-nowrap'>
+                            <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight shrink-0'>
                                 Featured <span className="text-transparent bg-clip-text bg-linear-to-r from-[#fe9a00] to-yellow-500">Projects</span>
                             </h2>
-                            <span className="h-px flex-1 bg-linear-to-r from-[#fe9a00]/50 to-transparent" />
+                            <span className="h-px flex-1 bg-linear-to-r from-[#fe9a00]/50 to-transparent min-w-2.5" />
                         </div>
-                        <p className='text-base lg:text-lg text-gray-400 max-w-2xl text-center lg:text-left leading-relaxed font-light'>
+                        <p className='text-sm sm:text-base lg:text-lg text-gray-400 max-w-2xl text-center lg:text-left leading-relaxed font-light'>
                             Explore some of the personal and team-based projects I have built, showcasing my skills and expertise in frontend and full-stack development.
                         </p>
                     </div>
