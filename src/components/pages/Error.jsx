@@ -40,7 +40,7 @@ const Error = () => {
                     </p>
                     <Link
                         to={"/"}
-                        className="group inline-flex items-center gap-2 border border-orange-500 text-orange-500 px-6 py-3 rounded-lg text-sm font-medium tracking-wide hover:bg-orange-500 hover:text-black transition-all duration-300"
+                        className="group inline-flex items-center gap-2 border border-orange-500 text-orange-500 px-6 py-3 rounded-lg text-sm font-medium tracking-wide hover:bg-orange-500 hover:text-white transition-all duration-300"
                     >
                         <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform duration-300" />
                         Back To Homepage
