@@ -1,10 +1,10 @@
 import { tech1, tech2, tech3, tech4, tech5 } from "./teckStack";
-import orebi from '../../assets/orebi.png'
-import port from '../../assets/port.png'
-import eduact from '../../assets/eduact.png'
-import creative from '../../assets/creative.png'
-import roiser from '../../assets/roiser.png'
-import cabbage from '../../assets/cabbage.png'
+import orebi from '../../assets/orebi.webp'
+import port from '../../assets/port.webp'
+import eduact from '../../assets/eduact.webp'
+import creative from '../../assets/creative.webp'
+import roiser from '../../assets/roiser.webp'
+import cabbage from '../../assets/cabbage.webp'
 
 export const allProjects = [
     {
