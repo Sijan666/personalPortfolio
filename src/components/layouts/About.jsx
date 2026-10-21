@@ -27,14 +27,17 @@ const About = () => {
             {/* Glow */}
             <div className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#fe9a00]/10 blur-[150px] opacity-70 pointer-events-none"></div>
             <div className="absolute bottom-[-10%] right-[-5%] w-[400px] h-[400px] rounded-full bg-blue-900/10 blur-[120px] opacity-50 pointer-events-none"></div>
-            <div className="py-20 lg:py-32 font-geist relative z-10 w-full">
+            <div className="py-16 sm:py-24 lg:py-32 font-geist relative z-10 w-full">
                 <Container>
-                    <div className="flex items-center gap-4 mb-12 lg:mb-16">
-                        <span className="h-px w-12 bg-[#fe9a00]" />
-                        <h3 className='text-3xl lg:text-4xl font-bold text-white tracking-tight'>
-                            About <span className="text-transparent bg-clip-text bg-linear-to-r from-[#fe9a00] to-yellow-500">Me</span>
-                        </h3>
-                        <span className="h-px flex-1 bg-linear-to-r from-[#fe9a00]/50 to-transparent" />
+                    {/* Synchronized Premium Header */}
+                    <div className="flex flex-col items-center lg:items-start mb-12 sm:mb-16 lg:mb-20 w-full min-w-0">
+                        <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4 w-full min-w-0">
+                            <span className="hidden lg:block h-px w-12 bg-[#fe9a00]" />
+                            <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight shrink-0'>
+                                About <span className="text-transparent bg-clip-text bg-linear-to-r from-[#fe9a00] to-yellow-500">Me</span>
+                            </h2>
+                            <span className="h-px flex-1 bg-linear-to-r from-[#fe9a00]/50 to-transparent min-w-2.5" />
+                        </div>
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch w-full">
                         {/* left column */}
