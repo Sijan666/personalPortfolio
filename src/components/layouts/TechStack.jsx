@@ -9,7 +9,6 @@ import { SiElementor, SiEslint, SiExpress, SiFirebase, SiJavascript, SiMongodb, 
 import { VscVscode } from "react-icons/vsc"
 import Container from "../Container"
 
-
 // Card 1: AI and Full-Stack
 const FULL_STACK = [
     { label: "Frontend", items: [
@@ -105,14 +104,21 @@ const ChipList = ({ items }) => (
 )
 
 const TechStack = () => (
-    <section id="techStack" className="relative w-full overflow-hidden bg-[#0a0f1c] py-24 font-geist lg:py-32">
+    <section id="techStack" className="relative w-full overflow-hidden bg-[#0a0f1c] py-24 font-geist lg:py-32 selection:bg-[#fe9a00] selection:text-[#0a0f1c]">
         <div aria-hidden="true" className="pointer-events-none absolute -right-[10%] top-[20%] size-[350px] rounded-full bg-[#fe9a00]/10 blur-[150px]" />
 
         <Container>
             <div className="relative z-10">
-                <div className="mb-12 max-w-2xl lg:mb-16">
-                    <h2 className="text-4xl font-bold tracking-tight text-[#ededed] lg:text-6xl">Tech stack</h2>
-                    <p className="mt-5 text-[15px] font-light leading-relaxed text-gray-400 lg:text-base">
+                {/* Synchronized Premium Header */}
+                <div className="flex flex-col items-center lg:items-start mb-16 lg:mb-20 w-full">
+                    <div className="flex items-center gap-4 mb-4 w-full">
+                        <span className="hidden lg:block h-px w-12 bg-[#fe9a00]" />
+                        <h2 className='text-4xl lg:text-5xl font-bold text-white tracking-tight whitespace-nowrap'>
+                            Tech <span className="text-transparent bg-clip-text bg-linear-to-r from-[#fe9a00] to-yellow-500">Stack</span>
+                        </h2>
+                        <span className="h-px flex-1 bg-linear-to-r from-[#fe9a00]/50 to-transparent" />
+                    </div>
+                    <p className='text-base lg:text-lg text-gray-400 max-w-2xl text-center lg:text-left leading-relaxed font-light'>
                         Two disciplines, one toolkit: AI-powered full-stack products and WordPress.
                     </p>
                 </div>
@@ -130,7 +136,6 @@ const TechStack = () => (
                             ))}
                         </div>
                     </Card>
-
                     {/* WordPress */}
                     <Card className="lg:col-span-5" delay={120}>
                         <FaWordpress aria-hidden="true" size={340} className="pointer-events-none absolute -bottom-16 -right-16 text-white/4" />
@@ -139,7 +144,6 @@ const TechStack = () => (
                             <ChipList items={WORDPRESS} />
                         </div>
                     </Card>
-
                     {/* tools */}
                     <Card className="lg:col-span-12">
                         <style>{"@keyframes tech-marquee{to{transform:translateX(-50%)}}"}</style>
@@ -155,7 +159,6 @@ const TechStack = () => (
                             </div>
                         </div>
                     </Card>
-                    
                     {/* principles */}
                     <Card className="lg:col-span-12">
                         <CardHead Icon={RiGraduationCapFill} title="Principles" desc="How I build, whatever the stack." />
