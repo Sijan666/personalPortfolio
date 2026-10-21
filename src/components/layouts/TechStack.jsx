@@ -1,290 +1,175 @@
-import React from 'react'
-import Container from '../Container'
-import { BsDatabase, BsLayoutTextWindowReverse } from 'react-icons/bs'
-import { IoLogoCss3, IoLogoHtml5, IoLogoJavascript } from 'react-icons/io'
-import { SiEslint, SiExpress, SiFirebase, SiJavascript, SiMongodb, SiMongoose, SiNetlify, SiNpm, SiPostman, SiPrettier, SiRedux, SiTypescript } from 'react-icons/si'
-import { FaCube, FaFigma, FaGitAlt, FaGithub, FaGlobe, FaInfinity, FaMobileAlt, FaNodeJs, FaReact, FaYarn } from 'react-icons/fa'
-import { RiGraduationCapFill, RiNextjsFill, RiTailwindCssFill, RiTerminalBoxLine } from 'react-icons/ri'
-import { IoCodeSlash, IoLogoVercel } from 'react-icons/io5'
-import { VscVscode } from 'react-icons/vsc'
-import { CgPerformance } from 'react-icons/cg'
-import { GrTechnology } from 'react-icons/gr'
+import { useEffect, useRef, useState } from "react"
+import { CgPerformance } from "react-icons/cg"
+import { FaCube, FaFigma, FaGitAlt, FaGithub, FaGlobe, FaMobileAlt, FaNodeJs, FaReact, FaWordpress, FaYarn } from "react-icons/fa"
+import { GrTechnology } from "react-icons/gr"
+import { IoLogoCss3, IoLogoHtml5 } from "react-icons/io"
+import { IoCodeSlash, IoLogoVercel } from "react-icons/io5"
+import { RiGraduationCapFill, RiNextjsFill, RiTailwindCssFill, RiTerminalBoxLine } from "react-icons/ri"
+import { SiElementor, SiEslint, SiExpress, SiFirebase, SiJavascript, SiMongodb, SiMongoose, SiNetlify, SiNpm, SiPhp, SiPostman, SiPrettier, SiRedux, SiTypescript, SiWoocommerce } from "react-icons/si"
+import { VscVscode } from "react-icons/vsc"
+import Container from "../Container"
 
-const TechStack = () => {
+
+// Card 1: AI and Full-Stack
+const FULL_STACK = [
+    { label: "Frontend", items: [
+        ["HTML5", IoLogoHtml5, "#E34F26"], ["CSS3", IoLogoCss3, "#1572B6"], ["JavaScript", SiJavascript, "#F7DF1E"],
+        ["TypeScript", SiTypescript, "#3178C6"], ["React.js", FaReact, "#61DAFB"], ["Next.js", RiNextjsFill, "#FFFFFF"],
+        ["Redux", SiRedux, "#764ABC"], ["Tailwind CSS", RiTailwindCssFill, "#06B6D4"],
+    ] },
+    { label: "Backend", items: [["Node.js", FaNodeJs, "#339933"], ["Express.js", SiExpress, "#FFFFFF"]] },
+    { label: "Database", items: [["MongoDB", SiMongodb, "#47A248"], ["Mongoose", SiMongoose, "#FF6B6B"], ["Firebase", SiFirebase, "#FFCA28"]] },
+    { label: "DevOps", items: [
+        ["Git", FaGitAlt, "#F05032"], ["GitHub", FaGithub, "#FFFFFF"], ["Vercel", IoLogoVercel, "#FFFFFF"],
+        ["Netlify", SiNetlify, "#00C7B7"], ["Postman", SiPostman, "#FF6C37"],
+    ] },
+]
+
+// Card 2: WordPress
+const WORDPRESS = [
+    ["WordPress", FaWordpress, "#4AA3DF"], ["WooCommerce", SiWoocommerce, "#B77FD0"],
+    ["Elementor", SiElementor, "#F0477A"], ["PHP", SiPhp, "#8892BF"],
+]
+
+// Card 3: tools
+const TOOLS = [
+    ["Figma", FaFigma, "#F24E1E"], ["VS Code", VscVscode, "#007ACC"], ["Terminal", RiTerminalBoxLine, "#FFFFFF"],
+    ["NPM", SiNpm, "#CB3837"], ["Yarn", FaYarn, "#2C8EBB"], ["ESLint", SiEslint, "#4B32C3"], ["Prettier", SiPrettier, "#F7B93E"],
+]
+
+// Card 4: principles
+const PRINCIPLES = [
+    ["Responsive design", FaMobileAlt], ["Cross-browser compatibility", FaGlobe],
+    ["Performance optimization", CgPerformance], ["Component-driven architecture", FaCube],
+]
+
+const REVEAL = "transition-all duration-700 ease-out motion-reduce:transition-none"
+
+// true once the element has scrolled into view
+const useSeen = () => {
+    const ref = useRef(null)
+    const [seen, setSeen] = useState(false)
+    useEffect(() => {
+        const io = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setSeen(true)
+                io.disconnect()
+            }
+        }, { threshold: 0.15 })
+        io.observe(ref.current)
+        return () => io.disconnect()
+    }, [])
+    return [ref, seen]
+}
+
+// glass card
+const Card = ({ className = "", delay = 0, children }) => {
+    const [ref, seen] = useSeen()
     return (
-        <>
-        <section id='techStack' className="relative bg-[#0a0f1c] overflow-hidden w-full max-w-full">
-            <div className="absolute top-[20%] right-[-10%] w-[350px] h-[350px] bg-[#fe9a00] blur-[150px] opacity-10 pointer-events-none"></div>
-            <div className="lg:py-25 py-15 font-geist relative z-10 w-full">
-                <Container>
-                    {/* heading text */}
-                    <div className="heading text-center lg:text-left mb-4">
-                        <h3 className='text-[30px] lg:text-[40px] font-bold text-[#ededed] inline-block relative'>
-                            Tech Stack
-                            <span className="absolute -bottom-2 left-0 w-1/2 h-0.5 bg-linear-to-r from-[#fe9a00] to-transparent"></span>
-                        </h3>
-                    </div>
-                    {/* subtitle */}
-                    <div className="mb-12 text-center lg:text-left">
-                        <p className='text-[15px] text-[#ededed]/60 w-full max-w-full lg:max-w-[559px] mx-auto lg:mx-0 leading-relaxed font-light'>
-                            From frontend frameworks to backend systems, databases, DevOps, and key development principles this is my tech toolkit.
-                        </p>
-                    </div>
-                    {/* grid layout */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start w-full">
-                        {/* frontend */}
-                        <div className="frontend flex flex-col p-5 sm:p-6 lg:p-8 bg-white/2 border border-white/5 backdrop-blur-xl rounded-3xl hover:bg-white/3 hover:border-white/8 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
-                            <div className="flex gap-x-4 items-center">
-                                <div className="p-3 h-12 w-12 shrink-0 flex items-center justify-center bg-[#fe9a00]/10 border border-[#fe9a00]/20 rounded-xl">
-                                    <BsLayoutTextWindowReverse size={22} className='text-[#fe9a00]'/>
-                                </div>
-                                <div className="text flex-1">
-                                    <div className="flex flex-wrap items-center gap-2 mb-1">
-                                        <h4 className='text-[20px] text-[#ededed] font-semibold'>Frontend</h4>
-                                        <span className='px-2 py-0.5 rounded-md bg-[#4ad08e]/10 border border-[#4ad08e]/20 text-[#4ad08e] text-[10px] uppercase tracking-wider font-medium'>Advanced</span>
-                                    </div>
-                                    <p className='text-[#ededed]/50 text-sm font-light'>Building responsive and dynamic user interfaces.</p>
-                                </div>
-                            </div>
-                            <div className="icons flex flex-wrap mt-6 gap-2.5">
-                                {/* 1 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <IoLogoHtml5 size={18} className='text-[#E34F26] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>HTML5</h4>
-                                </div>
-                                {/* 2 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <IoLogoCss3 size={18} className='text-[#007ACC] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>CSS3</h4>
-                                </div>
-                                {/* 3 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <SiJavascript size={18} className='text-[#F7DF1E] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>JavaScript</h4>
-                                </div>
-                                {/* 4 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <SiTypescript size={18} className='text-[#3178C6] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>TypeScript</h4>
-                                </div>
-                                {/* 5 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <FaReact size={18} className='text-[#61DAFB] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>React.js</h4>
-                                </div>
-                                {/* 6 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <RiNextjsFill size={18} className='text-[#ffffff] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Next.js</h4>
-                                </div>
-                                {/* 7 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <SiRedux size={18} className='text-[#764ABC] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Redux</h4>
-                                </div>
-                                {/* 8 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <RiTailwindCssFill size={18} className='text-[#06B6D4] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Tailwind CSS</h4>
-                                </div>
-                            </div>
-                        </div>
-                        {/* backend */}
-                        <div className="backend flex flex-col p-5 sm:p-6 lg:p-8 bg-white/2 border border-white/5 backdrop-blur-xl rounded-3xl hover:bg-white/3 hover:border-white/8 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
-                            <div className="flex gap-x-4 items-center">
-                                <div className="p-3 h-12 w-12 shrink-0 flex items-center justify-center bg-[#fe9a00]/10 border border-[#fe9a00]/20 rounded-xl">
-                                    <IoCodeSlash size={22} className='text-[#fe9a00]'/>
-                                </div>
-                                <div className="text flex-1">
-                                    <div className="flex flex-wrap items-center gap-2 mb-1">
-                                        <h4 className='text-[20px] text-[#ededed] font-semibold'>Backend</h4>
-                                        <span className='px-2 py-0.5 rounded-md bg-[#fe626b]/10 border border-[#fe626b]/20 text-[#fe626b] text-[10px] uppercase tracking-wider font-medium'>Beginner</span>
-                                    </div>
-                                    <p className='text-[#ededed]/50 text-sm font-light'>Creating robust APIs and server-side applications.</p>
-                                </div>
-                            </div>
-                            <div className="icons flex flex-wrap mt-6 gap-2.5">
-                                {/* 1 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <FaNodeJs size={18} className='text-[#339933] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Node.js</h4>
-                                </div>
-                                {/* 2 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <SiExpress size={18} className='text-[#ffffff] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Express.js</h4>
-                                </div>
-                            </div>
-                        </div>
-                        {/* database */}
-                        <div className="database flex flex-col p-5 sm:p-6 lg:p-8 bg-white/2 border border-white/5 backdrop-blur-xl rounded-3xl hover:bg-white/3 hover:border-white/8 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
-                            <div className="flex gap-x-4 items-center">
-                                <div className="p-3 h-12 w-12 shrink-0 flex items-center justify-center bg-[#fe9a00]/10 border border-[#fe9a00]/20 rounded-xl">
-                                    <BsDatabase size={22} className='text-[#fe9a00]'/>
-                                </div>
-                                <div className="text flex-1">
-                                    <div className="flex flex-wrap items-center gap-2 mb-1">
-                                        <h4 className='text-[20px] text-[#ededed] font-semibold'>Database</h4>
-                                        <span className='px-2 py-0.5 rounded-md bg-[#fe626b]/10 border border-[#fe626b]/20 text-[#fe626b] text-[10px] uppercase tracking-wider font-medium'>Beginner</span>
-                                    </div>
-                                    <p className='text-[#ededed]/50 text-sm font-light'>Managing and designing efficient data storage solutions.</p>
-                                </div>
-                            </div>
-                            <div className="icons flex flex-wrap mt-6 gap-2.5">
-                                {/* 1 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <SiMongodb size={18} className='text-[#47A248] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>MongoDB</h4>
-                                </div>
-                                {/* 2 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <SiMongoose size={18} className='text-[#880000] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Mongoose</h4>
-                                </div>
-                                {/* 3 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <SiFirebase size={18} className='text-[#DD2C00] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Firebase</h4>
-                                </div>
-                            </div>
-                        </div>
-                        {/* devops */}
-                        <div className="devops flex flex-col p-5 sm:p-6 lg:p-8 bg-white/2 border border-white/5 backdrop-blur-xl rounded-3xl hover:bg-white/3 hover:border-white/8 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
-                            <div className="flex gap-x-4 items-center">
-                                <div className="p-3 h-12 w-12 shrink-0 flex items-center justify-center bg-[#fe9a00]/10 border border-[#fe9a00]/20 rounded-xl">
-                                    <FaInfinity size={22} className='text-[#fe9a00]'/>
-                                </div>
-                                <div className="text flex-1">
-                                    <div className="flex flex-wrap items-center gap-2 mb-1">
-                                        <h4 className='text-[20px] text-[#ededed] font-semibold'>DevOps</h4>
-                                        <span className='px-2 py-0.5 rounded-md bg-[#4ad08e]/10 border border-[#4ad08e]/20 text-[#4ad08e] text-[10px] uppercase tracking-wider font-medium'>Advanced</span>
-                                    </div>
-                                    <p className='text-[#ededed]/50 text-sm font-light'>Deployment, CI/CD, and server management.</p>
-                                </div>
-                            </div>
-                            <div className="icons flex flex-wrap mt-6 gap-2.5">
-                                {/* 1 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <FaGitAlt size={18} className='text-[#F05032] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Git</h4>
-                                </div>
-                                {/* 2 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <FaGithub size={18} className='text-[#ffffff] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>GitHub</h4>
-                                </div>
-                                {/* 3 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <IoLogoVercel size={18} className='text-[#ffffff] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Vercel</h4>
-                                </div>
-                                {/* 4 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <SiNetlify size={18} className='text-[#00C7B7] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Netlify</h4>
-                                </div>
-                                {/* 5 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <SiPostman size={18} className='text-[#F7B93E] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Postman</h4>
-                                </div>
-                            </div>
-                        </div>
-                        {/* tools */}
-                        <div className="tools flex flex-col p-5 sm:p-6 lg:p-8 bg-white/2 border border-white/5 backdrop-blur-xl rounded-3xl hover:bg-white/3 hover:border-white/8 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
-                            <div className="flex gap-x-4 items-center">
-                                <div className="p-3 h-12 w-12 shrink-0 flex items-center justify-center bg-[#fe9a00]/10 border border-[#fe9a00]/20 rounded-xl">
-                                    <GrTechnology size={22} className='text-[#fe9a00]'/>
-                                </div>
-                                <div className="text flex-1">
-                                    <div className="flex flex-wrap items-center gap-2 mb-1">
-                                        <h4 className='text-[20px] text-[#ededed] font-semibold'>Tools</h4>
-                                        <span className='px-2 py-0.5 rounded-md bg-[#fe9a00]/10 border border-[#fe9a00]/20 text-[#fe9a00] text-[10px] uppercase tracking-wider font-medium'>Intermediate</span>
-                                    </div>
-                                    <p className='text-[#ededed]/50 text-sm font-light'>Design, coding, and productivity tools.</p>
-                                </div>
-                            </div>
-                            <div className="icons flex flex-wrap mt-6 gap-2.5">
-                                {/* 1 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <FaFigma size={18} className='text-[#F24E1E] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Figma</h4>
-                                </div>
-                                {/* 2 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <VscVscode size={18} className='text-[#007ACC] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>VS Code</h4>
-                                </div>
-                                {/* 3 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <RiTerminalBoxLine size={18} className='text-white group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Terminal</h4>
-                                </div>
-                                {/* 4 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <SiNpm size={18} className='text-[#CB3837] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>NPM</h4>
-                                </div>
-                                {/* 5 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <FaYarn size={18} className='text-[#2C8EBB] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Yarn</h4>
-                                </div>
-                                {/* 6 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <SiEslint size={18} className='text-[#4B32C3] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>ESLint</h4>
-                                </div>
-                                {/* 7 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <SiPrettier size={18} className='text-[#F7B93E] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Prettier</h4>
-                                </div>
-                            </div>
-                        </div>
-                        {/* fundamentals */}
-                        <div className="fundamentals flex flex-col p-5 sm:p-6 lg:p-8 bg-white/2 border border-white/5 backdrop-blur-xl rounded-3xl hover:bg-white/3 hover:border-white/8 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
-                            <div className="flex gap-x-4 items-center">
-                                <div className="p-3 h-12 w-12 shrink-0 flex items-center justify-center bg-[#fe9a00]/10 border border-[#fe9a00]/20 rounded-xl">
-                                    <RiGraduationCapFill size={22} className='text-[#fe9a00]'/>
-                                </div>
-                                <div className="text flex-1">
-                                    <div className="flex flex-wrap items-center gap-2 mb-1">
-                                        <h4 className='text-[20px] text-[#ededed] font-semibold'>Fundamentals</h4>
-                                        <span className='px-2 py-0.5 rounded-md bg-[#4ad08e]/10 border border-[#4ad08e]/20 text-[#4ad08e] text-[10px] uppercase tracking-wider font-medium'>Advanced</span>
-                                    </div>
-                                    <p className='text-[#ededed]/50 text-sm font-light'>Core web development concepts and best practices.</p>
-                                </div>
-                            </div>
-                            <div className="icons flex flex-wrap mt-6 gap-2.5">
-                                {/* 1 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <FaMobileAlt size={18} className='text-[#fe9a00] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Responsive Design</h4>
-                                </div>
-                                {/* 2 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <FaGlobe size={18} className='text-[#00C950] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Cross-browser Compatibility</h4>
-                                </div>
-                                {/* 3 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <CgPerformance size={18} className='text-[#FB2C36] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Performance Optimization</h4>
-                                </div>
-                                {/* 4 */}
-                                <div className="py-2.5 px-3.5 bg-white/2 border border-white/5 hover:border-[#fe9a00]/30 hover:bg-[#fe9a00]/5 rounded-xl flex items-center gap-x-2.5 transition-all duration-300 group">
-                                    <FaCube size={18} className='text-[#F6339A] group-hover:scale-110 transition-transform duration-300' />
-                                    <h4 className='text-[#ededed]/80 text-[13px] font-medium tracking-wide'>Component-Driven Architecture</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </Container>
+        <div ref={ref} style={{ transitionDelay: `${delay}ms` }} className={`${REVEAL} ${seen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"} ${className}`}>
+            <div className="relative h-full overflow-hidden rounded-3xl border border-white/10 bg-white/3 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl sm:p-8">
+                {children}
             </div>
-        </section>
-        </>
+        </div>
     )
 }
+
+const CardHead = ({ Icon, title, desc }) => (
+    <div className="relative flex items-center gap-4">
+        <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-[#fe9a00]/20 bg-[#fe9a00]/10">
+            <Icon size={22} className="text-[#fe9a00]" />
+        </div>
+        <div>
+            <h3 className="text-xl font-semibold text-[#ededed]">{title}</h3>
+            <p className="mt-0.5 text-sm font-light text-gray-400">{desc}</p>
+        </div>
+    </div>
+)
+
+// grey icon
+const Chip = ({ name, Icon, color }) => (
+    <span style={{ "--brand": color }} className="group/chip inline-flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/4 px-3.5 py-2 text-[13px] font-medium text-gray-300 transition-colors duration-300 hover:border-[#fe9a00]/30 hover:bg-white/8 hover:text-white motion-reduce:transition-none">
+        <Icon size={18} className="text-gray-500 transition-colors duration-300 group-hover/chip:text-(--brand)" />
+        {name}
+    </span>
+)
+
+const ChipList = ({ items }) => (
+    <ul className="flex flex-wrap gap-2.5">
+        {items.map(([name, Icon, color]) => (
+            <li key={name}><Chip name={name} Icon={Icon} color={color} /></li>
+        ))}
+    </ul>
+)
+
+const TechStack = () => (
+    <section id="techStack" className="relative w-full overflow-hidden bg-[#0a0f1c] py-24 font-geist lg:py-32">
+        <div aria-hidden="true" className="pointer-events-none absolute -right-[10%] top-[20%] size-[350px] rounded-full bg-[#fe9a00]/10 blur-[150px]" />
+
+        <Container>
+            <div className="relative z-10">
+                <div className="mb-12 max-w-2xl lg:mb-16">
+                    <h2 className="text-4xl font-bold tracking-tight text-[#ededed] lg:text-6xl">Tech stack</h2>
+                    <p className="mt-5 text-[15px] font-light leading-relaxed text-gray-400 lg:text-base">
+                        Two disciplines, one toolkit: AI-powered full-stack products and WordPress.
+                    </p>
+                </div>
+                <div className="grid gap-6 lg:grid-cols-12">
+                    {/* AI and Full-Stack */}
+                    <Card className="lg:col-span-7">
+                        <div aria-hidden="true" className="pointer-events-none absolute -left-20 -top-20 size-64 rounded-full bg-[#fe9a00]/10 blur-3xl" />
+                        <CardHead Icon={IoCodeSlash} title="AI & Full-Stack" desc="Products from interface to infrastructure." />
+                        <div className="relative mt-6 divide-y divide-white/10">
+                            {FULL_STACK.map(({ label, items }) => (
+                                <div key={label} className="grid gap-3 py-5 sm:grid-cols-[6.5rem_1fr] sm:items-baseline">
+                                    <h4 className="text-sm font-medium text-gray-400">{label}</h4>
+                                    <ChipList items={items} />
+                                </div>
+                            ))}
+                        </div>
+                    </Card>
+
+                    {/* WordPress */}
+                    <Card className="lg:col-span-5" delay={120}>
+                        <FaWordpress aria-hidden="true" size={340} className="pointer-events-none absolute -bottom-16 -right-16 text-white/4" />
+                        <CardHead Icon={FaWordpress} title="WordPress" desc="Building and customising WordPress sites and stores." />
+                        <div className="relative mt-8">
+                            <ChipList items={WORDPRESS} />
+                        </div>
+                    </Card>
+
+                    {/* tools */}
+                    <Card className="lg:col-span-12">
+                        <style>{"@keyframes tech-marquee{to{transform:translateX(-50%)}}"}</style>
+                        <CardHead Icon={GrTechnology} title="Tools" desc="Design, coding and productivity." />
+                        <div className="relative mt-6 overflow-hidden mask-[linear-gradient(90deg,transparent,black_8%,black_92%,transparent)] motion-reduce:mask-none">
+                            <div className="flex w-max animate-[tech-marquee_32s_linear_infinite] hover:[animation-play-state:paused] motion-reduce:w-auto motion-reduce:animate-none">
+                                <ul className="flex shrink-0 gap-3 pr-3 motion-reduce:flex-wrap">
+                                    {TOOLS.map(([name, Icon, color]) => <li key={name}><Chip name={name} Icon={Icon} color={color} /></li>)}
+                                </ul>
+                                <ul aria-hidden="true" className="flex shrink-0 gap-3 pr-3 motion-reduce:hidden">
+                                    {TOOLS.map(([name, Icon, color]) => <li key={name}><Chip name={name} Icon={Icon} color={color} /></li>)}
+                                </ul>
+                            </div>
+                        </div>
+                    </Card>
+                    
+                    {/* principles */}
+                    <Card className="lg:col-span-12">
+                        <CardHead Icon={RiGraduationCapFill} title="Principles" desc="How I build, whatever the stack." />
+                        <ul className="relative mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                            {PRINCIPLES.map(([name, Icon]) => (
+                                <li key={name} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/4 p-4 text-sm font-medium text-gray-200">
+                                    <Icon size={20} className="shrink-0 text-[#fe9a00]" />
+                                    {name}
+                                </li>
+                            ))}
+                        </ul>
+                    </Card>
+                </div>
+            </div>
+        </Container>
+    </section>
+)
 
 export default TechStack
